@@ -1,16 +1,20 @@
-#!flask/bin/python
-from flask import Flask, jsonify
+#!/usr/bin/python
+
+from bottle import route, run, debug, template, request, static_file, error
+
 import json
 
-app = Flask(__name__)
+def jsonify(dic):
+    print 'dic:',dic
+    return json.dumps(dic, indent=4)
+    
 
-
-@app.route('/api/helloBlat', methods=["GET"])
+@route('/api/helloBlat', methods=["GET"])
 def helloBlat():
     return jsonify({"Blat": "6"})
 
 
-@app.route("/api/get_mock", methods=["GET"])
+@route("/api/get_mock", methods=["GET"])
 def get_mock():
     with open(r".\DataSamples\MosesSample.json", "r") as mosesFile:
         json
@@ -19,6 +23,12 @@ def get_mock():
 
 
 
+def main():
+    # remember to remove reloader=True and debug(True) when you move your
+    # application from development to a productive environment
+    debug(True)
+    run(reloader=True)
 
+    
 if __name__ == '__main__':
-    app.run(debug=True)
+    main()
