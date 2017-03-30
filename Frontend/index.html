@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="ColHack">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="Content/angular-material.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-controller="mainCtrl" ng-cloak>
+        <md-content class="md-padding navbar">
+            <md-nav-bar md-selected-nav-item="currentNavItem"
+                        nav-bar-aria-label="navigation links">
+                <md-nav-item md-nav-click="goto('/home')" name="home">
+                    <ng-md-icon icon="home" style="fill: teal" size="30"></ng-md-icon> 
+                </md-nav-item>
+                <md-nav-item md-nav-click="goto('/flights')" name="flights">
+                    Flights
+                </md-nav-item>
+                <md-nav-item md-nav-click="goto('/Attractions')" name="attractions">
+                    Attractions
+                </md-nav-item>
+                <md-nav-item md-nav-click="goto('/AroundMe')" name="aroundMe">
+                    Around Me
+                </md-nav-item>
+            </md-nav-bar>
+        </md-content>
+
+        <div ng-view></div>
+    </div>
+
+    <script src="Plugins/jquery-3.2.0.min.js"></script>
+    <!-- Angular -->
+    <script src="Plugins/Angular/angular.min.js"></script>
+    <script src="Plugins/Angular/angular-animate.min.js"></script>
+    <script src="Plugins/Angular/angular-aria.min.js"></script>
+    <script src="Plugins/Angular/angular-material-icons.min.js"></script>
+    <script src="Plugins/Angular/angular-material.min.js"></script>
+    <script src="Plugins/Angular/angular-messages.min.js"></script>
+    <script src="Plugins/Angular/angular-route.min.js"></script>
+    <script src="Scripts/app.js"></script>
+    <!-- Controllers -->
+    <script src="Scripts/Controllers/AroundMeCtrl.js"></script>
+    <script src="Scripts/Controllers/flightCtrl.js"></script>
+    <script src="Scripts/Controllers/MainCtrl.js"></script>
+    <script src="Scripts/Controllers/PlacesCtrl.js"></script>
+</body>
+</html>
