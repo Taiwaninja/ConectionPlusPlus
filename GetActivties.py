@@ -7,7 +7,9 @@ import os
 
 
 def jsonify(dic):
-    """JSON ==> str, pretty-print"""
+    """
+    Pretty-print a dictionary as a JSON string
+    """
     return json.dumps(dic, indent=4)
 
 
@@ -34,6 +36,19 @@ def get_mock():
     return jsonify(moses)
 
 
+@route("/api/get_amadeus", methods=["GET"])
+def get_amadeus():
+    """
+    http://127.0.0.1:8080/api/get_amadeus?lon=32.007966&lat=34.53866&d=30
+    """
+    lon = request.params.get('lon', default=32.107898)
+    lat = request.params.get('lat', default=34.838002)
+    d = request.params.get('d', default=1)
+    around_moses = AmadeusClient.get_point_of_interest(lon, lat, d)
+    # TODO: If you make changes load and jasonify again
+    return jsonify(around_moses)
+    
+    
 @route("/api/get_mock_amadeus", methods=["GET"])
 def get_mock_amadeus():
     around_moses = AmadeusClient.get_point_of_interest(32.107898, 34.838002, 1)
