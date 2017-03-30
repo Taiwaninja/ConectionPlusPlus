@@ -1,6 +1,6 @@
 from Apis.RestApiUtils import RestApiUtils
 from Apis.Amadeus import Config
-import urllib2
+import json
 
 
 class AmadeusClient(object):
@@ -12,4 +12,12 @@ class AmadeusClient(object):
         params[Config.PARAM_LAT] = lat
         params[Config.PARAM_LONG] = long
         params[Config.PARAM_RADIUS] = radius
-        return RestApiUtils.rest_api_request(Config.POINT_OF_INTRESET_API_URL, params)
+        return json.loads(RestApiUtils.rest_api_request(Config.POINT_OF_INTRESET_API_URL, params))
+        places = json.loads(RestApiUtils.rest_api_request(Config.POINT_OF_INTRESET_API_URL, params))
+        return cls.parse_amadeos_responses(places)
+
+    def parse_amadeos_responses(cls, resp):
+
+        pass
+
+

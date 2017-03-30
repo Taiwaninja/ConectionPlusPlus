@@ -4,12 +4,8 @@
       "location_id": "123456",
       "name": "Moses",
       "address": "Habarzel, Tel Aviv, Israel",
-      "distance": {
-        "text": "22.7 km"
-      },
-      "duration": {
-        "text": "24 mins"
-      },
+      "distance": "22.7 km",
+      "duration": "24 mins",
       "location": {
         "lat": 32.107898,
         "lng": 34.838002
