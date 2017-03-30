@@ -22,13 +22,10 @@ class RestApiUtils(object):
                 first_parameter = False
             else:
                 request_url += APIConsts.PARAMETER_DELIMITER
-            request_url += APIConsts.PARAMETER_FORMAT.format(param_name=param_name, param_value=param_value)
+            request_url += APIConsts.PARAMETER_FORMAT.format(param_name, param_value)
         return request_url
 
     @classmethod
     def rest_api_request(cls, api_root_url, parameters_dict):
         url = cls.build_request_url(api_root_url, parameters_dict)
         return urllib2.urlopen(url).read()
-
-
-A
