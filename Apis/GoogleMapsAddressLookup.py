@@ -7,6 +7,14 @@ GOOGLE_API_KEY = 'AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g'
 GOOGLE_ADDRESS_LOOKUP = 'https://maps.googleapis.com/maps/api/geocode/json?'
 
 
+RESULTS_STRING = 'results'
+ADDRESS_STRING = 'formatted_address'
+def get_address_from_geodata(js):
+    if RESULTS_STRING not in js or len(js[RESULTS_STRING]) == 0 or ADDRESS_STRING not in js[RESULTS_STRING][0]:
+        return js[RESULTS_STRING][0][ADDRESS_STRING]
+    else:
+        return None
+
 def get_address_by_lon_lat(lat, lon):
     request = GOOGLE_ADDRESS_LOOKUP + 'latlng='+str(lat)+','+str(lon)+'&key='+GOOGLE_API_KEY
     conn = urllib2.urlopen(request)
@@ -14,7 +22,7 @@ def get_address_by_lon_lat(lat, lon):
 
     js = json.loads(st)
     #TODO Choose correct address
-    return js['results'][0]['formatted_address']
+    return get_address_from_geodata(js)
 
 
 def get_address_by_name(name):
@@ -24,7 +32,7 @@ def get_address_by_name(name):
 
     js = json.loads(st)
     #TODO Choose correct address
-    return js['results'][0]['formatted_address']
+    return get_address_from_geodata(js)
 
 
 if __name__ == '__main__':
