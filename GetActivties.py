@@ -47,8 +47,8 @@ def get_amadeus():
     around_moses = AmadeusClient.get_point_of_interest(lon, lat, radius=d)
     # TODO: If you make changes load and jasonify again
     return jsonify(around_moses)
-    
-    
+
+
 @route("/api/get_mock_amadeus", methods=["GET"])
 def get_mock_amadeus():
     around_moses = AmadeusClient.get_point_of_interest(32.107898, 34.838002, 1)
@@ -60,7 +60,7 @@ def main():
     # remember to remove reloader=True and debug(True) when you move your
     # application from development to a productive environment
     debug(True)
-    run(reloader=True)
+    run(host="0.0.0.0", reloader=True)
 
 
 if __name__ == '__main__':
