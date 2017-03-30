@@ -21,7 +21,13 @@ POINT_OF_INTEREST_RETURN_FORMAT = {
     "name": "title",
     # TODO: Add address
     # "address" : blat ,
-    #TODO: Calculate distance
-    # "distance": ,
+    # TODO: Calculate distance
+    # "distance": blat,
+    "location": {"lat": ["location", "latitude"], "long": ["location", "longitude"]},
+    "desc": ["details", "description"],
+    # TODO: Add rating
+    # "rating": blat,
+    "img": "main_image",
+    "types": "categories"
 }
 RESP_LOCATION = "Location"
