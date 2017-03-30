@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import APIConsts
 import urllib2
 

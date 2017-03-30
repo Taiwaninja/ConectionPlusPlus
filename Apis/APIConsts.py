@@ -1,3 +1,4 @@
+#!/usr/bin/python
 PARAMETER_PREFIX = "?"
 PARAMETER_DELIMITER = "&"
 

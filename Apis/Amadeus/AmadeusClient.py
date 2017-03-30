@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from Apis.RestApiUtils import RestApiUtils
 from Apis.Amadeus import Config
 import json

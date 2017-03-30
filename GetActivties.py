@@ -3,6 +3,7 @@
 from bottle import route, run, debug, template, request, static_file, error
 from Apis.Amadeus.AmadeusClient import AmadeusClient
 import json
+import os
 
 
 def jsonify(dic):
@@ -15,8 +16,7 @@ def helloBlat():
 
 @route("/api/get_mock", methods=["GET"])
 def get_mock():
-    with open(r".\DataSamples\MosesSample.json", "r") as mosesFile:
-        json
+    with open(os.path.join(*['.', 'DataSamples', 'MosesSample.json']), 'r') as mosesFile:
         moses = json.load(mosesFile)
     return jsonify(moses)
 
