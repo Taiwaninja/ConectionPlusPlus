@@ -13,12 +13,14 @@ class AmadeusClient(object):
         params[Config.PARAM_LAT] = lat
         params[Config.PARAM_LONG] = long
         params[Config.PARAM_RADIUS] = radius
-        return json.loads(RestApiUtils.rest_api_request(Config.POINT_OF_INTRESET_API_URL, params))
+        # return json.loads(RestApiUtils.rest_api_request(Config.POINT_OF_INTRESET_API_URL, params))
         places = json.loads(RestApiUtils.rest_api_request(Config.POINT_OF_INTRESET_API_URL, params))
         return cls.parse_amadeos_responses(places)
 
+    @classmethod
     def parse_amadeos_responses(cls, resp):
-
-        pass
-
-
+        locations_raw = resp[Config.REQUEST_MAIN]
+        locations_parsed = [RestApiUtils.parse_response(location, Config.POINT_OF_INTEREST_RETURN_FORMAT) for location
+                            in locations_raw]
+        parsed_amadeos_response = {Config.RETURN_LOCATION: locations_parsed}
+        return parsed_amadeos_response

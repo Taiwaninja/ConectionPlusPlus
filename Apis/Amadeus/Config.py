@@ -18,7 +18,7 @@ AM_DESC = "details"
 #
 
 POINT_OF_INTEREST_RETURN_FORMAT = {
-    # ToDO add:"location_id" (outside format)
+    # TODO: add:"location_id" (outside format)
     "name": "title",
     # TODO: Add address
     # "address" : blat ,
@@ -31,4 +31,6 @@ POINT_OF_INTEREST_RETURN_FORMAT = {
     "img": "main_image",
     "types": "categories"
 }
-RESP_LOCATION = "Location"
+RETURN_LOCATION = "Locations"
+REQUEST_MAIN="points_of_interest"
+
