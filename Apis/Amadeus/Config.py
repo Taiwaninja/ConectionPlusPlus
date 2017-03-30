@@ -20,8 +20,6 @@ AM_DESC = "details"
 POINT_OF_INTEREST_RETURN_FORMAT = {
     # TODO: add:"location_id" (outside format)
     "name": "title",
-    # TODO: Add address
-    # "address" : blat ,
     # TODO: Calculate distance
     # "distance": blat,
     "location": {"lat": ["location", "latitude"], "long": ["location", "longitude"]},
@@ -32,5 +30,13 @@ POINT_OF_INTEREST_RETURN_FORMAT = {
     "types": "categories"
 }
 RETURN_LOCATION = "Locations"
-REQUEST_MAIN="points_of_interest"
+REQUEST_MAIN = "points_of_interest"
 
+# ENRICH
+
+PARAM_ADDRESS = "address"
+PARAM_LOCATION = "location"
+PARAM_LOCATION_LAT = "lat"
+PARAM_LOCATION_LONG = "long"
+
+WANTED_CATEGORIES = ["Skyscrapers","architecture"]

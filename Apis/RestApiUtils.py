@@ -33,11 +33,10 @@ class RestApiUtils(object):
     def rest_api_request(cls, api_root_url, parameters_dict):
         url = cls.build_request_url(api_root_url, parameters_dict)
         return urllib2.urlopen(url).read()
-    
+
     @classmethod
     def rest_api_request_post(cls, api_root_url, parameters_dict):
         return urllib2.urlopen(api_root_url, data=urllib.urlencode(parameters_dict)).read()
-
 
     @classmethod
     def parse_response(cls, response, output_format_dict):
@@ -70,26 +69,25 @@ class RestApiUtils(object):
                 continue
         return desired_output
 
-        
-        
-if __name__=="__main__":
+
+if __name__ == "__main__":
     url1 = 'http://alp.co.il/Json/listener.php'
-    user='TEST'
-    password='ALPTEST'
-    dest="LON"
-    date_to_fly="2017-04-06"
-    return_date="2017-04-16"
-    checksum=md5(password+user+'getData'+'FLIGHT'+date_to_fly+dest)
-##    print checksum.hexdigest()
-    params={"action":"getData",
-            "destination":dest,
-            "date":date_to_fly,
-            "dealtype":"FLIGHT",
-            "returnDate":return_date,
-            "adultNum":2,
-            "Checksum":checksum,
-            "siteRequest":user
-            }
-    result1 = RestApiUtils.rest_api_request_post(url1,params)
+    user = 'TEST'
+    password = 'ALPTEST'
+    dest = "LON"
+    date_to_fly = "2017-04-06"
+    return_date = "2017-04-16"
+    checksum = md5(password + user + 'getData' + 'FLIGHT' + date_to_fly + dest)
+    ##    print checksum.hexdigest()
+    params = {"action": "getData",
+              "destination": dest,
+              "date": date_to_fly,
+              "dealtype": "FLIGHT",
+              "returnDate": return_date,
+              "adultNum": 2,
+              "Checksum": checksum,
+              "siteRequest": user
+              }
+    result1 = RestApiUtils.rest_api_request_post(url1, params)
     js1 = json.loads(result1)
     print json.dumps(js1, indent=4)

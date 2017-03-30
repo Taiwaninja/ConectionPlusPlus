@@ -44,7 +44,7 @@ def get_amadeus():
     lon = request.params.get('lon', default=32.107898)
     lat = request.params.get('lat', default=34.838002)
     d = request.params.get('d', default=1)
-    around_moses = AmadeusClient.get_point_of_interest(lon, lat, d)
+    around_moses = AmadeusClient.get_point_of_interest(lon, lat, radius=d)
     # TODO: If you make changes load and jasonify again
     return jsonify(around_moses)
     
