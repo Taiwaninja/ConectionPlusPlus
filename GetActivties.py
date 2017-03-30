@@ -39,12 +39,12 @@ def get_mock():
 @route("/api/get_amadeus", methods=["GET"])
 def get_amadeus():
     """
-    http://127.0.0.1:8080/api/get_amadeus?lon=32.007966&lat=34.53866&d=30
+    http://127.0.0.1:8080/api/get_amadeus?longitude=32.007966&latitude=34.53866&radius=30
     """
-    lon = request.params.get('lon', default=32.107898)
-    lat = request.params.get('lat', default=34.838002)
-    d = request.params.get('d', default=1)
-    around_moses = AmadeusClient.get_point_of_interest(lon, lat, radius=d)
+    longitude = request.params.get('longitude', default=32.107898)
+    latitude = request.params.get('latitude', default=34.838002)
+    radius = request.params.get('radius', default=1)
+    around_moses = AmadeusClient.get_point_of_interest(longitude, latitude, radius=radius)
     # TODO: If you make changes load and jasonify again
     return jsonify(around_moses)
 
