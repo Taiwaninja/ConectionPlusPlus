@@ -13,8 +13,11 @@ app.controller('flightCtrl', function ($scope) {
     $scope.attractions = [];
     $scope.currLayover = null;
     $scope.searchresults = false;
+    $scope.locations = null;
 
     $scope.init = function () {
+        $scope.getActivities();
+
         $.get("http://10.10.192.137:8080/api/get_flights")
             .done(function (data) {
                 $scope.flights = (JSON.parse(data)).Flights;
@@ -42,15 +45,21 @@ app.controller('flightCtrl', function ($scope) {
     };
 
     $scope.getActivities = function () {
-        if (!$scope.currLayover)
-            return [];
+        //if (!$scope.currLayover)
+        //    return [];
+        
+        //$.get("http://10.10.192.137:8080/api/get_amadeus?longitude=" + $scope.currLayover.arrival1.Location.lng + "&deal_id=" + $scope.currLayover.deal_id + "&latitude=" + $scope.currLayover.arrival1.Location.lat + " & radius=30")
+        //    .done(function (data) {
+        //        if (data != null)
+        //            return (JSON.parse(data)).Locations;
 
-        $.get("http://10.10.192.137:8080/api/get_amadeus?longitude=" + $scope.currLayover.arrival1.Location.lng + "&deal_id=" + $scope.currLayover.deal_id + "&latitude=" + $scope.currLayover.arrival1.Location.lat + " & radius=30")
+        //        return [];
+        //    });
+
+        $.get("http://127.0.0.1:8080/api/get_activities?longitude=8.5643405&latitude=50.0379326&radius=30&deal_id=SC_139604220_16_110417_LH")
             .done(function (data) {
                 if (data != null)
-                    return (JSON.parse(data)).Locations;
-
-                return [];
+                    $scope.locations = JSON.parse(data);
             });
     }
 });

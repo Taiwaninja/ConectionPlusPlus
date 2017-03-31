@@ -5,9 +5,10 @@
         <md-card ng-repeat="loc in locations.Locations" flex-gt-sm="30" flex-xs="90" >
             <div style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex"></div>
             <div layout="row" layout-align="space-around center" style="padding-top: 7px;padding-bottom:7px;background-color:rgb(242, 242, 242);">
-                <ng-md-icon icon="star" style="fill: gold" size="30"></ng-md-icon> {{loc.rating}}
-                <ng-md-icon icon="drive_eta" style="fill: grey" size="30"></ng-md-icon> {{loc.distance}} {{loc.duration}}
-                <ng-md-icon icon="schedule" style="fill: grey" size="30"></ng-md-icon> {{loc.total_duration}}
+                <ng-md-icon icon="star" style="fill: gold" size="30"></ng-md-icon> 4.5
+                <ng-md-icon icon="drive_eta" style="fill: grey" size="30"></ng-md-icon> <span layout="column"><label>24.3 mi</label>
+                <label>26 min</label></span>
+                <ng-md-icon icon="schedule" style="fill: grey" size="30"></ng-md-icon> 6 Hrs
             </div>
             <div layout="column">
                 <md-card-title>

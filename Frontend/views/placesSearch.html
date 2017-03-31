@@ -1,4 +1,38 @@
-<div layout="column" flex>
+<div layout="column" flex ng-init="init()">
     <div style="height:80px"></div>
-    placessearch.html    
+    <md-content class="md-padding" layout-xs="column" layout="column">
+        <div flex="80" layout-align="center center">
+            <md-input-container md-no-float class="md-block">
+                <input class="main-search" ng-model="searchtxt" placeholder="Search...">
+            </md-input-container>
+            <br />
+
+        </div>
+        <div ng-if="locations.length == 0" style="display:flex;justify-content:center">
+            No search results where found...
+        </div>
+        <div layout="row" layout-wrap flex="nogrow" style="display:flex;justify-content:center">
+            <md-card ng-repeat="loc in locations|filter:searchtxt" flex-gt-sm="30" flex-xs="90">
+                <div style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex"></div>
+                <div layout="row" layout-align="space-around center" style="padding-top: 7px;padding-bottom:7px;background-color:rgb(242, 242, 242);">
+                    <ng-md-icon icon="star" style="fill: gold" size="30"></ng-md-icon> {{loc.rating}}
+                    <ng-md-icon icon="drive_eta" style="fill: grey" size="30"></ng-md-icon> {{loc.distance}} {{loc.duration}}
+                    <ng-md-icon icon="schedule" style="fill: grey" size="30"></ng-md-icon> {{loc.total_duration}}
+                </div>
+                <div layout="column">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{loc.name}}</span>
+                            <span class="adress"><ng-md-icon icon="place" style="fill: grey" size="16"></ng-md-icon>{{loc.address}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                        <p>
+                            {{loc.desc}}
+                        </p>
+                    </md-card-content>
+                </div>
+            </md-card>
+        </div>
+    </md-content>
 </div>

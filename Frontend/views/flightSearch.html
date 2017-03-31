@@ -17,15 +17,17 @@
             </div>
         </div>
         <div class="dates" layout="row" layout-align="center center">
-            <md-datepicker ng-model="startDate" md-placeholder="Enter date"></md-datepicker>
-            <ng-md-icon icon="chevron_right" style="fill: teal; margin-right:10px; margin-left:10px" size="43"></ng-md-icon>
-            <md-datepicker ng-model="endDate" md-placeholder="Enter date"></md-datepicker>
-        </div>
-        <div class="travelers" layout="row" layout-align="center center">
-            <ng-md-icon icon="people" style="fill: teal; margin-right:5px;" size="43"></ng-md-icon>
-            <md-input-container class="md-block" md-no-float>
-                <input class="main-search" required type="number" step="any" name="rate" ng-model="travelers" min="1" placeholder="1"/>
-            </md-input-container>
+            <div>
+                <md-datepicker ng-model="startDate" md-placeholder="Enter date"></md-datepicker>
+                <ng-md-icon icon="chevron_right" style="fill: teal; margin-right:10px; margin-left:10px" size="43"></ng-md-icon>
+                <md-datepicker ng-model="endDate" md-placeholder="Enter date"></md-datepicker>
+            </div>
+            <div class="travelers" layout="row" layout-align="center center">
+                <ng-md-icon icon="people" style="fill: teal; margin-right:5px;" size="43"></ng-md-icon>
+                <md-input-container class="md-block" md-no-float>
+                    <input class="main-search" required type="number" step="any" name="rate" ng-model="travelers" min="1" placeholder="1" />
+                </md-input-container>
+            </div>
         </div>
         <div class="buttons" layout="row" layout-align="center center">
             <md-button class="md-primary md-raised" ng-click="submit()" layout="row" layout-align="center center" style="padding:4px"><ng-md-icon icon="search" style="fill: white; margin-right:5px" size="30"></ng-md-icon>Search</md-button>
@@ -50,10 +52,6 @@
                                     <span>{{nonstop[0].departure1.Flight_no}}</span>
                                     <span>{{nonstop[0].departure1.time}} <ng-md-icon icon="chevron_right" style="fill: teal; margin-right:10px; margin-left:10px" size="10"></ng-md-icon> {{nonstop[0].arrival1.time}}</span>
                                 </div>
-                                <!--<md-card-actions layout="row" layout-align="start center">
-                                    <md-button>Action 1</md-button>
-                                    <md-button>Action 2</md-button>
-                                </md-card-actions>-->
                             </md-card>
                             <md-card flex-gt-sm="30">
                                 <md-card-header>
@@ -72,83 +70,36 @@
                                 </div>
                             </md-card>
                         </div>
-                        <md-card ng-repeat="loc in getActivities()" flex-gt-sm="30" flex-xs="90">
-                            <div style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex"></div>
-                            <div layout="row" layout-align="space-around center" style="padding-top: 7px;padding-bottom:7px;background-color:rgb(242, 242, 242);">
-                                <ng-md-icon icon="star" style="fill: gold" size="30"></ng-md-icon> {{loc.rating}}
-                                <ng-md-icon icon="drive_eta" style="fill: grey" size="30"></ng-md-icon> {{loc.distance}} {{loc.duration}}
-                                <ng-md-icon icon="schedule" style="fill: grey" size="30"></ng-md-icon> {{loc.total_duration}}
-                            </div>
-                            <div layout="column">
-                                <md-card-title>
-                                    <md-card-title-text>
-                                        <span class="md-headline">{{loc.name}}</span>
-                                        <span class="adress"><ng-md-icon icon="place" style="fill: grey" size="16"></ng-md-icon>{{loc.address}}</span>
-                                    </md-card-title-text>
-                                </md-card-title>
-                                <md-card-content>
-                                    <p>
-                                        {{loc.desc}}
-                                    </p>
-                                </md-card-content>
-                            </div>
-                        </md-card>
+                        <div layout="row" layout-align="center start" flex-wrap flex="noshrink" style="display:flex;justify-content:center">
+                            <md-card ng-repeat="loc in locations.Locations" flex-gt-sm="40" flex-xs="90"style="width:500px">
+                                <div style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;width:500px;height: 220px;overflow: hidden;background-position: center center;display: flex"></div>
+                                <div layout="row" layout-align="space-around center" style="padding-top: 7px;padding-bottom:7px;background-color:rgb(242, 242, 242);">
+                                    <ng-md-icon icon="star" style="fill: gold" size="30"></ng-md-icon> {{loc.rating}}
+                                    <ng-md-icon icon="drive_eta" style="fill: grey" size="30"></ng-md-icon> {{loc.distance}} {{loc.duration}}
+                                    <ng-md-icon icon="schedule" style="fill: grey" size="30"></ng-md-icon> {{loc.total_duration}}
+                                </div>
+                                <div layout="column">
+                                    <md-card-title>
+                                        <md-card-title-text>
+                                            <span class="md-headline">{{loc.name}}</span>
+                                            <span class="adress"><ng-md-icon icon="place" style="fill: grey" size="16"></ng-md-icon>{{loc.address}}</span>
+                                        </md-card-title-text>
+                                    </md-card-title>
+                                    <md-card-content>
+                                        <p>
+                                            {{loc.desc}}
+                                        </p>
+                                    </md-card-content>
+                                </div>
+                            </md-card>
+                        </div>
                     </div>
                 </md-tab-body>
             </md-tab>
             <md-tab id="Back" flex>
                 <md-tab-label>{{destination}} <ng-md-icon icon="keyboard_tab" style="fill: white; margin-right:10px; margin-left:10px" size="20"></ng-md-icon> {{departure}}</md-tab-label>
                 <md-tab-body>
-                    <div layout="column">
-                        <div layout="row" layout-align="space-around center">
-                            <md-card flex-gt-sm="30">
-                                <md-card-header>
-                                    <md-card-header-text>
-                                        <span class="md-title">Nonstop</span>
-                                    </md-card-header-text>
-                                </md-card-header>
-                                <div layout="column" layout-align="center center" style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex;justify-content:center">
-                                    <span style="color:forestgreen">$1100</span>
-                                </div>
-                                <!--<md-card-actions layout="row" layout-align="start center">
-                    <md-button>Action 1</md-button>
-                    <md-button>Action 2</md-button>
-                </md-card-actions>-->
-                            </md-card>
-                            <md-card flex-gt-sm="30">
-                                <md-card-header>
-                                    <md-card-header-text>
-                                        <span class="md-title">Layovers</span>
-                                    </md-card-header-text>
-                                </md-card-header>
-                                <div layout="column" layout-align="center center" style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;justify-content:center;overflow: hidden;background-position: center center;display: flex">
-                                    <span>5 hours in Paris</span>
-                                    <span style="color:forestgreen">$330</span>
-                                </div>
-                            </md-card>
-                        </div>
-                        <md-card ng-repeat="loc in getLocationsByDeal()" flex-gt-sm="30" flex-xs="90">
-                            <div style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex"></div>
-                            <div layout="row" layout-align="space-around center" style="padding-top: 7px;padding-bottom:7px;background-color:rgb(242, 242, 242);">
-                                <ng-md-icon icon="star" style="fill: gold" size="30"></ng-md-icon> {{loc.rating}}
-                                <ng-md-icon icon="drive_eta" style="fill: grey" size="30"></ng-md-icon> {{loc.distance}} {{loc.duration}}
-                                <ng-md-icon icon="schedule" style="fill: grey" size="30"></ng-md-icon> {{loc.total_duration}}
-                            </div>
-                            <div layout="column">
-                                <md-card-title>
-                                    <md-card-title-text>
-                                        <span class="md-headline">{{loc.name}}</span>
-                                        <span class="adress"><ng-md-icon icon="place" style="fill: grey" size="16"></ng-md-icon>{{loc.address}}</span>
-                                    </md-card-title-text>
-                                </md-card-title>
-                                <md-card-content>
-                                    <p>
-                                        {{loc.desc}}
-                                    </p>
-                                </md-card-content>
-                            </div>
-                        </md-card>
-                    </div>
+                    
                 </md-tab-body>
             </md-tab>
         </md-tabs>
