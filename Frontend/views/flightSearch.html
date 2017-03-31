@@ -41,17 +41,17 @@
                 <md-tab-body>
                     <div layout="column">
                         <div layout="row" layout-align="space-around center">
-                            <md-card flex-gt-sm="20">
+                            <md-card flex-gt-sm="25">
                                 <md-card-header>
                                     <md-card-header-text>
                                         <span class="md-title">Nonstop</span>
                                     </md-card-header-text>
                                 </md-card-header>
                                 <div layout="column" layout-align="center center" style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex;justify-content:center">
-                                    <span>Flight: {{nonstop[0].departure1.Flight_no}}</span>
+                                    <span>{{nonstop[0].departure1.Flight_no}}</span>
                                     <span style="color:darkred;font-size: 40px;">{{nonstop[0].price + ' ' + nonstop[0].currency}}</span>
                                     
-                                    <span>{{nonstop[0].departure1.time}} <ng-md-icon icon="chevron_right" style="fill: teal; margin-right:10px; margin-left:10px" size="10"></ng-md-icon> {{nonstop[0].arrival1.time}}</span>
+                                    <span>{{nonstop[0].departure1.time + ' ' + nonstop[0].departure1.Airport_code}} <ng-md-icon icon="chevron_right" style="fill: teal; margin-right:10px; margin-left:10px" size="10"></ng-md-icon> {{nonstop[0].arrival1.time+ ' ' + nonstop[0].arrival1.Airport_code}}</span>
                                 </div>
                             </md-card>
                             <md-card flex-gt-sm="30">
