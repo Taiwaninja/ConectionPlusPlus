@@ -1,11 +1,13 @@
 {
   "Flights": [
     {
+      "Activities": [],
       "deal_id": "SC_139604220_16_110417_LH",
       "departure1": {
         "Flight_no": "LH691",
         "Airport_code": "TLV",
         "city": "TLV",
+        "city_name": "Tel Aviv",
         "time": "11/04/17 04:50",
         "Location": {
           "lat": 32.005532,
@@ -16,6 +18,7 @@
         "Flight_no": "LH4286",
         "Airport_code": "FRA",
         "city": "FRA",
+        "city_name": "Frankfurt",
         "time": "11/04/17 21:00",
         "Location": {
           "lat": 50.0379326,
@@ -26,6 +29,7 @@
         "Flight_no": "LH691",
         "Airport_code": "FRA",
         "city": "FRA",
+        "city_name":"Frankfurt",
         "time": "11/04/17 08:20",
         "Location": {
           "lat": 50.0379326,
@@ -36,22 +40,25 @@
         "Flight_no": "LH4286",
         "Airport_code": "BKK",
         "city": "BKK",
+        "city_name":"Bangkok",
         "time": "12/04/17 10:00",
         "Location": {
           "lat": 13.6899991,
           "lng": 100.7523011
         }
       },
-      "Layover": 1,
+      "Layover": "12:40",
       "price": 859,
       "currency": "USD"
     },
     {
+      "Activities": [],
       "deal_id": "SC_139604220_30_110417_LY",
       "departure1": {
         "Flight_no": "LY81",
         "Airport_code": "TLV",
         "city": "TLV",
+        "city_name": "Tel Aviv",
         "time": "11/04/17 22:30",
         "Location": {
           "lat": 32.005532,
@@ -63,6 +70,7 @@
         "Flight_no": "LY81",
         "Airport_code": "BKK",
         "city": "BKK",
+        "city_name": "bangkok",
         "time": "12/04/17 14:00",
         "Location": {
           "lat": 13.6899991,
