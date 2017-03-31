@@ -41,9 +41,13 @@ def get_mock():
 
 @route("/api/get_flights", methods=["GET"])
 def get_flights():
-    with open(os.path.join(*['.', 'DataSamples', 'Flights.json']), 'r') as flight_file:
-        moses = json.load(flight_file)
-    return jsonify(moses)
+    """
+    http://127.0.0.1:8080/api/get_flights?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee
+    :return: 
+    """
+    with open(os.path.join(*['.', 'DataSamples', 'flights.json']), 'rb') as flight_file:
+        flight = json.load(flight_file)
+    return jsonify(flight)
 
 
 @route("/api/get_google_places", methods=["GET"])
