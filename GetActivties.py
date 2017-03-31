@@ -2,6 +2,8 @@
 
 from bottle import route, run, debug, response, template, request, static_file, error, hook
 from Apis.Amadeus.AmadeusClient import AmadeusClient
+from Apis.Zomato.ZomatoClient import ZomatoClient
+from Apis.ActivityRetriever import ActivityRetriever
 import json
 import os
 import requests
@@ -45,11 +47,13 @@ def get_restaurants():
     longitude = request.params.get('longitude', default=-73.98513)
     latitude = request.params.get('latitude', default=40.75889)
     radius = request.params.get('radius', default=1000)
-    url = 'https://developers.zomato.com/api/v2.1/search?lat=%s&lon=%s&radius=%s' % (latitude, longitude, radius)
-    r = requests.get(url, headers={"user-key":'eb437426154058ef4547a6f81778539e', 'Accept': 'application/json'})
-    js = r.json()
+    # url = 'https://developers.zomato.com/api/v2.1/search?lat=%s&lon=%s&radius=%s' % (latitude, longitude, radius)
+    # r = requests.get(url, headers={"user-key":'eb437426154058ef4547a6f81778539e'})
+    # js = r.json()
+    js = ZomatoClient.get_point_of_interest(latitude, longitude, radius=radius)
     return jsonify(js)
-    
+
+
 @route("/api/get_amadeus", methods=["GET"])
 def get_amadeus():
     """
@@ -68,6 +72,18 @@ def get_mock_amadeus():
     around_moses = AmadeusClient.get_point_of_interest(32.107898, 34.838002, 1)
     # TODO: If you make changes load and jasonify again
     return jsonify(around_moses)
+
+
+@route("/api/get_activities", methods=["GET"])
+def get_activities():
+    """
+    http://127.0.0.1:8080/api/get_activities?longitude=32.007966&latitude=34.53866&radius=30
+    """
+    longitude = request.params.get('longitude', default=32.107898)
+    latitude = request.params.get('latitude', default=34.838002)
+    radius = request.params.get('radius', default=1)
+    activities = ActivityRetriever.get_point_of_interest(longitude, latitude, radius=radius)
+    return jsonify(activities)
 
 
 def main():
