@@ -182,9 +182,10 @@ def get_mock_amadeus():
 def get_activities():
     """
     http://127.0.0.1:8080/api/get_activities?longitude=32.007966&latitude=34.53866&radius=30&deal_id=blat
+    http://127.0.0.1:8080/api/get_activities?longitude=8.5643405&latitude=50.0379326&radius=30&deal_id=SC_139604220_16_110417_LH
     """
-    longitude = request.params.get('longitude', default=32.107898)
-    latitude = request.params.get('latitude', default=34.838002)
+    longitude = float(request.params.get('longitude', default=32.107898))
+    latitude = float(request.params.get('latitude', default=34.838002))
     radius = request.params.get('radius', default=1)
     deal_id = request.params.get("deal_id", default=None)
     # TODO : Add shit
