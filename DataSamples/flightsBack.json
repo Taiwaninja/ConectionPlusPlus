@@ -1,11 +1,13 @@
 {
   "Flights": [
     {
+      "Activities": [],
       "deal_id": "SC_139604220_16_110417_LH",
       "departure1": {
         "Flight_no": "OS26",
         "Airport_code": "BKK",
         "city": "BKK",
+        "city_name": "Bangkok",
         "time": "20/04/17 23:45",
         "Location": {
           "lat": 13.6899991,
@@ -17,6 +19,7 @@
         "Airport_code": "VIE",
         "city": "VIE",
         "time": "21/04/17 20:25",
+        "city_name": "Wien-Flughafen",
         "Location": {
           "lat": 48.1158333,
           "lng": 16.5687638
@@ -27,6 +30,7 @@
         "Airport_code": "VIE",
         "city": "VIE",
         "time": "21/04/17 05:35",
+        "city_name": "Wien-Flughafen",
         "Location": {
           "lat": 48.1158333,
           "lng": 16.5687638
@@ -37,6 +41,7 @@
         "Airport_code": "TLV",
         "city": "TLV",
         "time": "1/04/17 00:50",
+        "city_name": "Tel Aviv",
         "Location": {
           "lat": 32.005532,
           "lng": 34.8854112
@@ -47,6 +52,7 @@
       "currency": "USD"
     },
     {
+      "Activities": [],
       "deal_id": "SC_139604220_30_110417_LY",
       "departure1": {
         "Flight_no": "LY82",
@@ -63,6 +69,7 @@
         "Flight_no": "LY82",
         "Airport_code": "TLV",
         "city": "TLV",
+        "city_name": "Tel Aviv",
         "time": "20/04/17 07:00",
         "Location": {
           "lat": 32.005532,
