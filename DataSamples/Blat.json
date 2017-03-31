@@ -1,0 +1,38 @@
+{
+  "Locations": [
+    {
+      "location": {
+        "lat": 32.1079,
+        "long": 34.8388
+      },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Asuta_Hospital.jpg/400px-Asuta_Hospital.jpg",
+      "name": "Assuta Medical Center",
+      "types": [
+        "Buildings and structures in Tel Aviv",
+        "Hospital buildings completed in 2009",
+        "Hospitals in Israel"
+      ],
+      "desc": "Assuta Medical Center is a private medical center in Israel that performs surgery and diagnostic procedures in all fields of medicine, including cardiology, oncology, gynecology and urology. Assuta Medical Center, established in 1936, is located in the Ramat HaHayal neighborhood in north Tel Aviv.\n\n"
+    },
+    {
+      "location": {
+        "lat": 32.1148,
+        "long": 34.8433
+      },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Attidim_048.jpg/400px-Attidim_048.jpg",
+      "name": "Kiryat Atidim",
+      "types": [],
+      "desc": "Kiryat Atidim is the main high tech area of Tel Aviv. It is located in North East of Tel Aviv near the Petah Tikva industrial zone. The zone was opened in 1972 as a project of Tel Aviv University and Tel Aviv City Hall."
+    },
+    {
+      "location": {
+        "lat": 32.1153,
+        "long": 34.8365
+      },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/RamatHahayal.JPG/400px-RamatHahayal.JPG",
+      "name": "Ramat HaHayal",
+      "types": [],
+      "desc": "Ramat HaHayal is a northeastern neighborhood of Tel Aviv, Israel. Some of the leading global high tech firms have research and development offices in Ramat HaHayal."
+    }
+  ]
+}

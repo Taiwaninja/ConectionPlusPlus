@@ -5,6 +5,7 @@ from Apis.Amadeus.AmadeusClient import AmadeusClient
 from Apis.Zomato.ZomatoClient import ZomatoClient
 from Apis.ActivityRetriever import ActivityRetriever
 import json
+import datetime
 import os
 import requests
 
@@ -37,8 +38,8 @@ def get_mock():
     with open(os.path.join(*['.', 'DataSamples', 'MosesSample.json']), 'r') as mosesFile:
         moses = json.load(mosesFile)
     return jsonify(moses)
-    
-    
+
+
 @route("/api/get_flights", methods=["GET"])
 def get_flights():
     """
@@ -74,7 +75,7 @@ def get_flights_back_forth():
     flights = {"OUTBOUND": flight, "INBOUND": flightBack}
     return jsonify(flights)
 
-    
+
 def get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword):
     url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s,%s&radius=%s&type=%s&keyword=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (
         latitude, longitude, radius, obj_type, obj_keyword)
@@ -90,13 +91,13 @@ def get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword):
             except KeyError:
                 pass
             except:
-                print 'PlaceID:',pid,'====ERROR_AT_OPEN_HOURS====='
+                print 'PlaceID:', pid, '====ERROR_AT_OPEN_HOURS====='
                 import traceback
                 print traceback.format_exc()
                 pass
-            #########################
+                #########################
     return js
-    
+
 
 @route("/api/get_google_places", methods=["GET"])
 def get_google_places():
@@ -133,12 +134,13 @@ def get_google_places_hours():
 
 
 def get_google_places_details_bl(placeid):
-    url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (placeid,)
+    url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (
+        placeid,)
     r = requests.get(url)
     js = r.json()
     return jsonify(js)
-    
-    
+
+
 @route("/api/get_google_places_details", methods=["GET"])
 def get_google_places_details():
     """
@@ -146,7 +148,7 @@ def get_google_places_details():
     """
     placeid = request.params.get('placeid', default='')
     return get_google_places_details_bl(placeid)
-    
+
 
 @route("/api/get_restaurants", methods=["GET"])
 def get_restaurants():
@@ -192,10 +194,13 @@ def get_activities():
     latitude = request.params.get('latitude', default=34.838002)
     radius = request.params.get('radius', default=1)
     deal_id = request.params.get("deal_id", default=None)
+    # TODO : Add shit
+    start_time = datetime.datetime.utcnow()
+    end_time = start_time + datetime.timedelta(days=5)
     if deal_id is not None:
         if deal_id == "SC_139604220_16_110417_LH":
             # If first flight
-            if 50 <= latitude and latitude >= 50:
+            if 50 <= latitude and latitude <= 51:
                 with open(os.path.join(*['.', 'DataSamples', 'Activity1.json']), 'r') as activity_file:
                     activity = json.load(activity_file)
                     return jsonify(activity)
@@ -204,7 +209,8 @@ def get_activities():
                     activity = json.load(activity_file)
                     return jsonify(activity)
 
-    activities = ActivityRetriever.get_point_of_interest(longitude, latitude, radius=radius)
+    activities = ActivityRetriever.get_point_of_interest(longitude, latitude, start_time=start_time, end_time=end_time,
+                                                         radius=radius)
     return jsonify(activities)
 
 

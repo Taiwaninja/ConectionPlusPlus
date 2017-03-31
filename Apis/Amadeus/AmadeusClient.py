@@ -12,7 +12,7 @@ class AmadeusClient(object):
     @classmethod
     def get_point_of_interest(cls, lat, long, end_time=None, radius=1, start_time=None):
         if start_time is None:
-            start_time = datetime.datetime.utcnow() + datetime.timedelta(hours=+55)
+            start_time = datetime.datetime.utcnow() + datetime.timedelta(hours=+48)
         if end_time is None:
             end_time = start_time + datetime.timedelta(hours=13)
 
@@ -33,7 +33,8 @@ class AmadeusClient(object):
 
         # Add address if works
         # activities_parsed = cls.enrich_and_filter_activities(activities_parsed)
-        activities_parsed = cls.enrich_and_filter_activities(curr_location, times, activities_parsed)
+        # TODO: removed filter
+        #activities_parsed = cls.enrich_and_filter_activities(curr_location, times, activities_parsed)
         parsed_amadeos_response = {Apis.APIConsts.RETURN_LOCATION: activities_parsed}
         return parsed_amadeos_response
 
