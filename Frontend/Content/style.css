@@ -42,3 +42,7 @@ svg{
 .md-datepicker-input{
     background-color: rgba(255,255,255,0.85); border-radius: 8px; padding-left: 10px; font-size: 20px; height: 48px;
 }
+
+md-card.activity:hover {
+    background-color:rgba(3, 129, 129,0.1);
+}

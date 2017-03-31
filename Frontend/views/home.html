@@ -2,9 +2,14 @@
     <div style="height:80px"></div>
     <div class="mainimage_container" flexlayout="row" layout-align="center center">
         <div flex="60" layout-align="center center">
-            <h1>Fly.Have Fun</h1>
+            <h1 style="font-size: 94px;
+    font-stretch: wider;
+    font-style: italic;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.29);
+    text-align: start;">ConNEXT</h1>
             <md-input-container md-no-float class="md-block">
-                <input class="main-search" ng-model="searchtxt" placeholder="Where would you like to go?">
+                <input class="main-search" ng-model="searchtxt" placeholder="Where would you like to go?" ng-keypress="submit($event)">
             </md-input-container>
         </div>
     </div>

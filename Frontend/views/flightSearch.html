@@ -1,6 +1,6 @@
 <div layout="column" flex">
     <div style="height:80px"></div>
-    <div class="search-info">
+    <div class="search-info" style="background-color:rgba(3, 129, 129,0.1)">
         <div class="airports" layout="row" layout-align="center center">
             <ng-md-icon icon="flight_takeoff" style="fill: teal; margin-right:5px;" size="43"></ng-md-icon>
             <div flex="30" layout-align="center center">
@@ -17,17 +17,17 @@
             </div>
         </div>
         <div class="dates" layout="row" layout-align="center center">
-            <div>
+            <div layout="row" layout-align="center center">
                 <md-datepicker ng-model="startDate" md-placeholder="Enter date"></md-datepicker>
                 <ng-md-icon icon="chevron_right" style="fill: teal; margin-right:10px; margin-left:10px" size="43"></ng-md-icon>
                 <md-datepicker ng-model="endDate" md-placeholder="Enter date"></md-datepicker>
             </div>
-            <div class="travelers" layout="row" layout-align="center center">
-                <ng-md-icon icon="people" style="fill: teal; margin-right:5px;" size="43"></ng-md-icon>
-                <md-input-container class="md-block" md-no-float>
-                    <input class="main-search" required type="number" step="any" name="rate" ng-model="travelers" min="1" placeholder="1" />
-                </md-input-container>
-            </div>
+        </div>
+        <div class="travelers" layout="row" layout-align="center center">
+            <ng-md-icon icon="people" style="fill: teal; margin-right:5px;" size="43"></ng-md-icon>
+            <md-input-container class="md-block" md-no-float>
+                <input class="main-search" required type="number" step="any" name="rate" ng-model="travelers" min="1" placeholder="1" />
+            </md-input-container>
         </div>
         <div class="buttons" layout="row" layout-align="center center">
             <md-button class="md-primary md-raised" ng-click="submit()" layout="row" layout-align="center center" style="padding:4px"><ng-md-icon icon="search" style="fill: white; margin-right:5px" size="30"></ng-md-icon>Search</md-button>
@@ -48,8 +48,9 @@
                                     </md-card-header-text>
                                 </md-card-header>
                                 <div layout="column" layout-align="center center" style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex;justify-content:center">
-                                    <span style="color:forestgreen">{{nonstop[0].price + ' ' + nonstop[0].currency}}</span>
-                                    <span>{{nonstop[0].departure1.Flight_no}}</span>
+                                    <span>Flight: {{nonstop[0].departure1.Flight_no}}</span>
+                                    <span style="color:darkred;font-size: 40px;">{{nonstop[0].price + ' ' + nonstop[0].currency}}</span>
+                                    
                                     <span>{{nonstop[0].departure1.time}} <ng-md-icon icon="chevron_right" style="fill: teal; margin-right:10px; margin-left:10px" size="10"></ng-md-icon> {{nonstop[0].arrival1.time}}</span>
                                 </div>
                             </md-card>
@@ -60,10 +61,12 @@
                                     </md-card-header-text>
                                 </md-card-header>
                                 <div layout="column" layout-align="center center" style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;justify-content:center;overflow: hidden;background-position: center center;display: flex">
-                                    <span>{{layover[0].Layover}} hours in {{layover[0].arrival1.city_name + ', ' + layover[0].arrival1.city}}</span>
-                                    <span style="color:forestgreen">{{layover[0].price + ' ' + layover[0].currency}}</span>
+                                    <span>Flight: {{layover[0].departure1.Flight_no}}</span>
+                                    
+                                    <span style="color:forestgreen;font-size: 40px;">{{layover[0].price + ' ' + layover[0].currency}}</span>
                                     <br />
-                                    <span>{{layover[0].departure1.Flight_no}}</span>
+                                    <span>{{layover[0].Layover}} hours in {{layover[0].arrival1.city_name + ', ' + layover[0].arrival1.city}}</span>
+                                    <br />
                                     <span>{{layover[0].departure1.time + ' ' + layover[0].departure1.Airport_code}} <ng-md-icon icon="chevron_right" style="fill: teal; margin-right:10px; margin-left:10px" size="10"></ng-md-icon> {{layover[0].arrival1.time + ' ' + layover[0].arrival1.Airport_code}}</span>
                                     <span>{{layover[0].departure2.Flight_no}}</span>
                                     <span>{{layover[0].departure2.time + ' ' + layover[0].departure2.Airport_code}} <ng-md-icon icon="chevron_right" style="fill: teal; margin-right:10px; margin-left:10px" size="10"></ng-md-icon> {{layover[0].arrival2.time + ' ' + layover[0].arrival2.Airport_code}}</span>

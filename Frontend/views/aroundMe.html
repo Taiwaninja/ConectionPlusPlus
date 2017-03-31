@@ -2,7 +2,7 @@
     <div style="height:80px"></div>
 <md-content class="md-padding" layout-xs="column" layout="row">
     <div layout="row" layout-wrap flex="nogrow" style="display:flex;justify-content:center">
-        <md-card ng-repeat="loc in locations.Locations" flex-gt-sm="30" flex-xs="90" >
+        <md-card class="activity" ng-repeat="loc in locations.Locations" flex-gt-sm="30" flex-xs="90" >
             <div style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex"></div>
             <div layout="row" layout-align="space-around center" style="padding-top: 7px;padding-bottom:7px;background-color:rgb(242, 242, 242);">
                 <ng-md-icon icon="star" style="fill: gold" size="30"></ng-md-icon> 4.5
