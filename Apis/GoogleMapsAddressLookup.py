@@ -3,13 +3,15 @@ import urllib2
 from urllib import urlencode
 import json
 
-GOOGLE_API_KEY = 'AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g'
+GOOGLE_API_KEY = 'AIzaSyCE2Zq-tJF0Krw58_k8PaCfCTrCifRW9lY'
 
 GOOGLE_ADDRESS_LOOKUP = 'https://maps.googleapis.com/maps/api/geocode/json?'
 
 
 RESULTS_STRING = 'results'
 ADDRESS_STRING = 'formatted_address'
+
+
 def get_address_from_geodata(js):
     if RESULTS_STRING not in js or len(js[RESULTS_STRING]) == 0 or ADDRESS_STRING not in js[RESULTS_STRING][0]:
         return None
