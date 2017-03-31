@@ -37,8 +37,8 @@ def get_mock():
     with open(os.path.join(*['.', 'DataSamples', 'MosesSample.json']), 'r') as mosesFile:
         moses = json.load(mosesFile)
     return jsonify(moses)
-
-
+    
+    
 @route("/api/get_flights", methods=["GET"])
 def get_flights():
     """
@@ -74,6 +74,29 @@ def get_flights_back_forth():
     flights = {"OUTBOUND": flight, "INBOUND": flightBack}
     return jsonify(flights)
 
+    
+def get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword):
+    url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s,%s&radius=%s&type=%s&keyword=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (
+        latitude, longitude, radius, obj_type, obj_keyword)
+    r = requests.get(url)
+    js = r.json()
+    if 'results' in js:
+        for result in js['results']:
+            pid = result['place_id']
+            ##PATCH:: Opening hours##
+            try:
+                open_hours = json.loads(get_google_places_details_bl(pid))['result']['opening_hours']
+                result['opening_hours'] = open_hours
+            except KeyError:
+                pass
+            except:
+                print 'PlaceID:',pid,'====ERROR_AT_OPEN_HOURS====='
+                import traceback
+                print traceback.format_exc()
+                pass
+            #########################
+    return js
+    
 
 @route("/api/get_google_places", methods=["GET"])
 def get_google_places():
@@ -85,12 +108,38 @@ def get_google_places():
     radius = request.params.get('radius', default=5000)
     obj_type = request.params.get('type', default='')
     obj_keyword = request.params.get('keyword', default='')
-    url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s,%s&radius=%s&type=%s&keyword=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (
-        latitude, longitude, radius, obj_type, obj_keyword)
+    return jsonify(get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword))
+
+
+@route("/api/get_google_places_hours", methods=["GET"])
+def get_google_places_hours():
+    """
+    view-source:http://127.0.0.1:8080/api/get_google_places_hours?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee&keyword=starbucks
+    """
+    longitude = request.params.get('longitude', default=-73.98513)
+    latitude = request.params.get('latitude', default=40.75889)
+    radius = request.params.get('radius', default=5000)
+    obj_type = request.params.get('type', default='')
+    obj_keyword = request.params.get('keyword', default='')
+    x = get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword)
+    return jsonify(x['results'][0]['opening_hours']['weekday_text'])
+
+
+def get_google_places_details_bl(placeid):
+    url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (placeid,)
     r = requests.get(url)
     js = r.json()
     return jsonify(js)
-
+    
+    
+@route("/api/get_google_places_details", methods=["GET"])
+def get_google_places_details():
+    """
+    http://127.0.0.1:8080/api/get_google_places_details?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4
+    """
+    placeid = request.params.get('placeid', default='')
+    return get_google_places_details_bl(placeid)
+    
 
 @route("/api/get_restaurants", methods=["GET"])
 def get_restaurants():
