@@ -95,7 +95,7 @@ def get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword):
                 print traceback.format_exc()
                 pass
             #########################
-    return jsonify(js)
+    return js
     
 
 @route("/api/get_google_places", methods=["GET"])
@@ -108,9 +108,23 @@ def get_google_places():
     radius = request.params.get('radius', default=5000)
     obj_type = request.params.get('type', default='')
     obj_keyword = request.params.get('keyword', default='')
-    return get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword)
+    return jsonify(get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword))
 
-    
+
+@route("/api/get_google_places_hours", methods=["GET"])
+def get_google_places_hours():
+    """
+    view-source:http://127.0.0.1:8080/api/get_google_places_hours?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee&keyword=starbucks
+    """
+    longitude = request.params.get('longitude', default=-73.98513)
+    latitude = request.params.get('latitude', default=40.75889)
+    radius = request.params.get('radius', default=5000)
+    obj_type = request.params.get('type', default='')
+    obj_keyword = request.params.get('keyword', default='')
+    x = get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword)
+    return jsonify(x['results'][0]['opening_hours']['weekday_text'])
+
+
 def get_google_places_details_bl(placeid):
     url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (placeid,)
     r = requests.get(url)
