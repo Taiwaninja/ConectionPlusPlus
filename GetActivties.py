@@ -130,11 +130,24 @@ def get_mock_amadeus():
 @route("/api/get_activities", methods=["GET"])
 def get_activities():
     """
-    http://127.0.0.1:8080/api/get_activities?longitude=32.007966&latitude=34.53866&radius=30
+    http://127.0.0.1:8080/api/get_activities?longitude=32.007966&latitude=34.53866&radius=30&deal_id=blat
     """
     longitude = request.params.get('longitude', default=32.107898)
     latitude = request.params.get('latitude', default=34.838002)
     radius = request.params.get('radius', default=1)
+    deal_id = request.params.get("deal_id", default=None)
+    if deal_id is not None:
+        if deal_id == "SC_139604220_16_110417_LH":
+            # If first flight
+            if 50 <= latitude and latitude >= 50:
+                with open(os.path.join(*['.', 'DataSamples', 'Activity1.json']), 'r') as activity_file:
+                    activity = json.load(activity_file)
+                    return jsonify(activity)
+            else:
+                with open(os.path.join(*['.', 'DataSamples', 'Activity2.json']), 'r') as activity_file:
+                    activity = json.load(activity_file)
+                    return jsonify(activity)
+
     activities = ActivityRetriever.get_point_of_interest(longitude, latitude, radius=radius)
     return jsonify(activities)
 
