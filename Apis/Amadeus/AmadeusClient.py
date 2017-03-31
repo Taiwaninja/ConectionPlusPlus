@@ -2,6 +2,7 @@
 from Apis.RestApiUtils import RestApiUtils
 from Apis.Amadeus import Config
 from Apis import GoogleMapsAddressLookup
+from Apis import APIConsts
 import datetime
 import json
 
@@ -32,7 +33,7 @@ class AmadeusClient(object):
         # Add address if works
         # activities_parsed = cls.enrich_and_filter_activities(activities_parsed)
         activities_parsed = cls.enrich_and_filter_activities(activities_parsed)
-        parsed_amadeos_response = {Config.RETURN_LOCATION: activities_parsed}
+        parsed_amadeos_response = {APIConsts.RETURN_LOCATION: activities_parsed}
         return parsed_amadeos_response
 
     @classmethod

@@ -53,6 +53,9 @@ class RestApiUtils(object):
         """
         desired_output = {}
         for key, value in output_format_dict.iteritems():
+            if value is None:
+                desired_output[key] = None
+                continue
             value_type = type(value)
             if value_type == str:
                 desired_output[key] = response[value]
