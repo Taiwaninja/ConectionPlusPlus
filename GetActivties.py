@@ -74,6 +74,29 @@ def get_flights_back_forth():
     flights = {"OUTBOUND": flight, "INBOUND": flightBack}
     return jsonify(flights)
 
+    
+def get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword):
+    url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s,%s&radius=%s&type=%s&keyword=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (
+        latitude, longitude, radius, obj_type, obj_keyword)
+    r = requests.get(url)
+    js = r.json()
+    if 'results' in js:
+        for result in js['results']:
+            pid = result['place_id']
+            ##PATCH:: Opening hours##
+            try:
+                open_hours = json.loads(get_google_places_details_bl(pid))['result']['opening_hours']
+                result['opening_hours'] = open_hours
+            except KeyError:
+                pass
+            except:
+                print 'PlaceID:',pid,'====ERROR_AT_OPEN_HOURS====='
+                import traceback
+                print traceback.format_exc()
+                pass
+            #########################
+    return jsonify(js)
+    
 
 @route("/api/get_google_places", methods=["GET"])
 def get_google_places():
@@ -85,12 +108,15 @@ def get_google_places():
     radius = request.params.get('radius', default=5000)
     obj_type = request.params.get('type', default='')
     obj_keyword = request.params.get('keyword', default='')
-    url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s,%s&radius=%s&type=%s&keyword=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (
-        latitude, longitude, radius, obj_type, obj_keyword)
+    return get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword)
+
+    
+def get_google_places_details_bl(placeid):
+    url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (placeid,)
     r = requests.get(url)
     js = r.json()
     return jsonify(js)
-
+    
     
 @route("/api/get_google_places_details", methods=["GET"])
 def get_google_places_details():
@@ -98,10 +124,7 @@ def get_google_places_details():
     http://127.0.0.1:8080/api/get_google_places_details?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4
     """
     placeid = request.params.get('placeid', default='')
-    url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (placeid,)
-    r = requests.get(url)
-    js = r.json()
-    return jsonify(js)
+    return get_google_places_details_bl(placeid)
     
 
 @route("/api/get_restaurants", methods=["GET"])
