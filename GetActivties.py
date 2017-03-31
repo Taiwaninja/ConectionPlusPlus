@@ -112,6 +112,14 @@ def get_google_places():
     return jsonify(get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword))
 
 
+def get_google_places_hours_bl(longitude, latitude, radius, obj_type, obj_keyword):
+    try:
+        x = get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword)
+        return x['results'][0]['opening_hours']['weekday_text']
+    except Exception:
+        return None
+
+
 @route("/api/get_google_places_hours", methods=["GET"])
 def get_google_places_hours():
     """
@@ -122,8 +130,7 @@ def get_google_places_hours():
     radius = request.params.get('radius', default=5000)
     obj_type = request.params.get('type', default='')
     obj_keyword = request.params.get('keyword', default='')
-    x = get_google_places_bl(latitude, longitude, radius, obj_type, obj_keyword)
-    return jsonify(x['results'][0]['opening_hours']['weekday_text'])
+    return jsonify(get_google_places_hours_bl(longitude, latitude, radius, obj_type, obj_keyword))
 
 
 def get_google_places_details_bl(placeid):

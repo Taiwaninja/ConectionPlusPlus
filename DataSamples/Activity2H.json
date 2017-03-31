@@ -1,0 +1,141 @@
+{
+    "Locations": [
+        {
+            "name": "St. Stephen's Cathedral, Vienna",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wien_-_Stephansdom_%281%29.JPG/267px-Wien_-_Stephansdom_%281%29.JPG",
+            "opening_hours": [
+                "Monday: 6:00 AM \u2013 10:00 PM",
+                "Tuesday: 6:00 AM \u2013 10:00 PM",
+                "Wednesday: 6:00 AM \u2013 10:00 PM",
+                "Thursday: 6:00 AM \u2013 10:00 PM",
+                "Friday: 6:00 AM \u2013 10:00 PM",
+                "Saturday: 6:00 AM \u2013 10:00 PM",
+                "Sunday: 7:00 AM \u2013 10:00 PM"
+            ],
+            "location": {
+                "lat": 48.2085,
+                "long": 16.373
+            },
+            "time_data": {
+                "duration": "2",
+                "start": "2017-04-21 05:48:00",
+                "end": "2017-04-21 09:12:00"
+            },
+            "types": [],
+            "desc": "St. Stephen's Cathedral  is the mother church of the Roman Catholic Archdiocese of Vienna and the seat of the Archbishop of Vienna, Christoph Cardinal Sch\u00f6nborn, OP. The current Romanesque and Gothic form of the cathedral, seen today in the Stephansplatz, was largely initiated by Duke Rudolf IV  and stands on the ruins of two earlier churches, the first a parish church consecrated in 1147. The most important religious building in Vienna, St. Stephen's Cathedral has borne witness to many important events in Habsburg and Austrian history and has, with its multi-coloured tile roof, become one of the city's most recognizable symbols. The funeral of the Italian composer, Antonio Vivaldi occurred in this cathedral in 1741."
+        },
+        {
+            "name": "Kunsthistorisches Museum",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IMG_0089_-_Wien_-_Kunsthistorisches_Museum.JPG/400px-IMG_0089_-_Wien_-_Kunsthistorisches_Museum.JPG",
+            "opening_hours": [
+                "Monday: Closed",
+                "Tuesday: 10:00 AM \u2013 6:00 PM",
+                "Wednesday: 10:00 AM \u2013 6:00 PM",
+                "Thursday: 10:00 AM \u2013 9:00 PM",
+                "Friday: 10:00 AM \u2013 6:00 PM",
+                "Saturday: 10:00 AM \u2013 6:00 PM",
+                "Sunday: 10:00 AM \u2013 6:00 PM"
+            ],
+            "location": {
+                "lat": 48.2037,
+                "long": 16.3614
+            },
+            "time_data": {
+                "duration": "2",
+                "start": "2017-04-21 05:48:00",
+                "end": "2017-04-21 09:42:00"
+            },
+            "types": [],
+            "desc": "The Kunsthistorisches Museum  is an art museum in Vienna, Austria. Housed in its festive palatial building on Ringstra\u00dfe, it is crowned with an octagonal dome. The term Kunsthistorisches Museum applies to both the institution and the main building.\nIt was opened around 1891 at the same time as the Naturhistorisches Museum, by Emperor Franz Joseph I of Austria-Hungary. The two museums have identical exteriors and face each other across Maria-Theresien-Platz. Both buildings were built between 1872 and 1891 according to plans drawn up by Gottfried Semper and Karl Freiherr von Hasenauer.\nThe two Ringstra\u00dfe museums were commissioned by the Emperor in order to find a suitable shelter for the Habsburgs' formidable art collection and to make it accessible to the general public. The fa\u00e7ade was built of sandstone. The building is rectangular in shape, and topped with a dome that is 60 meters high. The inside of the building is lavishly decorated with marble, stucco ornamentations, gold-leaf, and paintings."
+        },
+        {
+            "name": "Stadtpark, Vienna",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Stadtpark_station.JPG/400px-Stadtpark_station.JPG",
+            "opening_hours": [
+                "Monday: Open 24 hours",
+                "Tuesday: Open 24 hours",
+                "Wednesday: Open 24 hours",
+                "Thursday: Open 24 hours",
+                "Friday: Open 24 hours",
+                "Saturday: Open 24 hours",
+                "Sunday: Open 24 hours"
+            ],
+            "location": {
+                "lat": 48.2047,
+                "long": 16.3806
+            },
+            "time_data": {
+                "duration": "2",
+                "start": "2017-04-21 05:48:00",
+                "end": "2017-04-21 08:52:00"
+            },
+            "types": [],
+            "desc": "The Stadtpark  in Vienna, Austria is a large municipal park that extends from the Ringstra\u00dfe in the Innere Stadt first district up to the Heumarkt  in the Landstra\u00dfe third district. The park is divided in two sections by the Wienfluss , and has a total surface area of 65,000 square metres . Scattered throughout the park are statues of famous Viennese artists, writers, and composers, including Hans Canon, Emil Jakob Schindler, Johann Strauss II, Franz Schubert, and Anton Bruckner. The opulent Kursalon building on Johannesgasse, with its broad terrace that reaches into the park, is the site of popular waltz concerts.\n\n"
+        },
+        {
+            "name": "Prater",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Wiener_Riesenrad_DSC02378.JPG/400px-Wiener_Riesenrad_DSC02378.JPG",
+            "opening_hours": [
+                "Monday: 9:00 AM \u2013 11:45 PM",
+                "Tuesday: 9:00 AM \u2013 11:45 PM",
+                "Wednesday: 9:00 AM \u2013 11:45 PM",
+                "Thursday: 9:00 AM \u2013 11:45 PM",
+                "Friday: 9:00 AM \u2013 11:45 PM",
+                "Saturday: 9:00 AM \u2013 11:45 PM",
+                "Sunday: 9:00 AM \u2013 11:45 PM"
+            ],
+            "location": {
+                "lat": 48.2161,
+                "long": 16.3956
+            },
+            "time_data": {
+                "duration": "2",
+                "start": "2017-04-21 05:48:00",
+                "end": "2017-04-21 09:12:00"
+            },
+            "types": [],
+            "desc": "The Prater is a large public park in Vienna's 2nd district . The Wurstelprater amusement park, often simply called \"Prater\", stands in one corner of the Wiener Prater and includes the Wiener Riesenrad."
+        },
+        {
+            "name": "Sch\u00f6nbrunn Palace",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Schloss_Sch%C3%B6nbrunn_Wien_2014_%28Zuschnitt_2%29.jpg/400px-Schloss_Sch%C3%B6nbrunn_Wien_2014_%28Zuschnitt_2%29.jpg",
+            "opening_hours": [
+                "Monday: 8:00 AM \u2013 5:00 PM",
+                "Tuesday: 8:00 AM \u2013 5:00 PM",
+                "Wednesday: 8:00 AM \u2013 5:00 PM",
+                "Thursday: 8:00 AM \u2013 5:00 PM",
+                "Friday: 8:00 AM \u2013 5:00 PM",
+                "Saturday: 8:00 AM \u2013 5:00 PM",
+                "Sunday: 8:00 AM \u2013 5:00 PM"
+            ],
+            "location": {
+                "lat": 48.1845,
+                "long": 16.3119
+            },
+            "time_data": {
+                "duration": "2",
+                "start": "2017-04-21 05:48:00",
+                "end": "2017-04-21 10:12:00"
+            },
+            "types": [
+                "Baroque architecture in Austria",
+                "Baroque gardens",
+                "Baroque palaces",
+                "Buildings and structures in Hietzing",
+                "Gardens in Austria",
+                "Historic house museums in Austria",
+                "Houses completed in 1548",
+                "Houses completed in 1643",
+                "Houses completed in 1750",
+                "Imperial residences in Austria",
+                "Landscape design history",
+                "Museums in Vienna",
+                "Palaces in Vienna",
+                "Rococo architecture of Austria",
+                "Sch\\xf6nbrunn Palace",
+                "World Heritage Sites in Vienna"
+            ],
+            "desc": "Sch\u00f6nbrunn Palace  is a former imperial summer residence located in Vienna, Austria. The 1,441-room Baroque palace is one of the most important architectural, cultural and historical monuments in the country. Since the mid-1950s it has been a major tourist attraction. The history of the palace and its vast gardens spans over 300 years, reflecting the changing tastes, interests, and aspirations of successive Habsburg monarchs."
+        }
+    ]
+}
