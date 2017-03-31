@@ -1,4 +1,4 @@
-<div layout="column" flex ng-init="init()">
+<div layout="column" flex">
     <div style="height:80px"></div>
     <div class="search-info">
         <div class="airports" layout="row" layout-align="center center">
@@ -26,11 +26,13 @@
             <md-input-container class="md-block" md-no-float>
                 <input class="main-search" required type="number" step="any" name="rate" ng-model="travelers" min="1" placeholder="1"/>
             </md-input-container>
-
+        </div>
+        <div class="buttons" layout="row" layout-align="center center">
+            <md-button class="md-primary md-raised" ng-click="submit()" layout="row" layout-align="center center" style="padding:4px"><ng-md-icon icon="search" style="fill: white; margin-right:5px" size="30"></ng-md-icon>Search</md-button>
         </div>
     </div>
 
-    <md-content layout="row"  layout-align="center stretch">
+    <md-content layout="row"  layout-align="center stretch" ng-if="searchresults">
         <md-tabs class="md-primary" md-dynamic-height flex>
             <md-tab id="To" flex>
                 <md-tab-label>{{departure}} <ng-md-icon icon="keyboard_tab" style="fill: white; margin-right:10px; margin-left:10px" size="20"></ng-md-icon> {{destination}}</md-tab-label>
@@ -70,7 +72,7 @@
                                 </div>
                             </md-card>
                         </div>
-                        <md-card ng-repeat="loc in currLayover.Activities.Locations " flex-gt-sm="30" flex-xs="90">
+                        <md-card ng-repeat="loc in getActivities()" flex-gt-sm="30" flex-xs="90">
                             <div style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex"></div>
                             <div layout="row" layout-align="space-around center" style="padding-top: 7px;padding-bottom:7px;background-color:rgb(242, 242, 242);">
                                 <ng-md-icon icon="star" style="fill: gold" size="30"></ng-md-icon> {{loc.rating}}
@@ -95,7 +97,7 @@
                 </md-tab-body>
             </md-tab>
             <md-tab id="Back" flex>
-                <md-tab-label>LON <ng-md-icon icon="keyboard_tab" style="fill: white; margin-right:10px; margin-left:10px" size="20"></ng-md-icon> TLV</md-tab-label>
+                <md-tab-label>{{destination}} <ng-md-icon icon="keyboard_tab" style="fill: white; margin-right:10px; margin-left:10px" size="20"></ng-md-icon> {{departure}}</md-tab-label>
                 <md-tab-body>
                     <div layout="column">
                         <div layout="row" layout-align="space-around center">

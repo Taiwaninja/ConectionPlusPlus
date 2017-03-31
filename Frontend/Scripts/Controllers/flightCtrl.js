@@ -5,13 +5,14 @@ app.controller('flightCtrl', function ($scope) {
     $scope.flights = null;
     $scope.nonstop = [];
     $scope.layover = [];
-    $scope.departure = "TLV";
-    $scope.destination = "LON";
+    $scope.departure = "";
+    $scope.destination = "";
     $scope.startDate;
     $scope.endDate;
     $scope.travelers = 1;
     $scope.attractions = [];
     $scope.currLayover = null;
+    $scope.searchresults = false;
 
     $scope.init = function () {
         $.get("http://10.10.192.137:8080/api/get_flights")
@@ -21,30 +22,35 @@ app.controller('flightCtrl', function ($scope) {
                 for (var i = 0; i < $scope.flights.length; i++) {
                     if ($scope.flights[i].Layover == 0)
                         $scope.nonstop.push($scope.flights[i]);
+
                     else {
-                        function get_data_func(i) {
-                            return function (data) {
-                                $scope.flights[i].Activities.push({
-                                    locations: JSON.parse(data)
-                                });
+                        if ($scope.layover[0] == null)
+                            $scope.currLayover = $scope.flights[i];
 
-                                if ($scope.layover[0] == null)
-                                    $scope.currLayover = $scope.flights[i];
+                        $scope.layover.push($scope.flights[i]);
 
-                                $scope.layover.push($scope.flights[i]);
-
-                                if ($scope.flights[i].price < $scope.currLayover.price)
-                                    $scope.currLayover = $scope.flights[i];
-                            };
-                        };
-
-                        $.get("http://10.10.192.137:8080/api/get_amadeus?longitude=" + $scope.flights[i].arrival1.Location.lng + "&deal_id=" + $scope.flights[i].deal_id +"&latitude=" + $scope.flights[i].arrival1.Location.lat + " & radius=30")
-                            .done(
-                            get_data_func(i)
-                            );
+                        if ($scope.flights[i].price < $scope.currLayover.price)
+                            $scope.currLayover = $scope.flights[i];
                     }
                 }
-                console.log('test');
             });        
     };
+
+    $scope.submit = function () {
+        $scope.init();
+        $scope.searchresults = true;
+    };
+
+    $scope.getActivities = function () {
+        if (!$scope.currLayover)
+            return [];
+
+        $.get("http://10.10.192.137:8080/api/get_amadeus?longitude=" + $scope.currLayover.arrival1.Location.lng + "&deal_id=" + $scope.currLayover.deal_id + "&latitude=" + $scope.currLayover.arrival1.Location.lat + " & radius=30")
+            .done(function (data) {
+                if (data != null)
+                    return (JSON.parse(data)).Locations;
+
+                return [];
+            });
+    }
 });
