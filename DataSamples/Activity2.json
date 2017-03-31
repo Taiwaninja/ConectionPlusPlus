@@ -1,0 +1,231 @@
+{
+    "Locations": [
+        {
+            "name": "Vienna State Opera", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wien_-_Staatsoper_%281%29.JPG/400px-Wien_-_Staatsoper_%281%29.JPG", 
+            "location": {
+                "lat": 48.2028, 
+                "long": 16.3685
+            }, 
+            "desc": "The Vienna State Opera  is an opera house \u2013 and opera company \u2013 with a history dating back to the mid-19th century. It is located in the centre of Vienna, Austria. It was originally called the Vienna Court Opera . In 1920, with the replacement of the Habsburg Monarchy by the First Republic of Austria, it was renamed the Vienna State Opera. The members of the Vienna Philharmonic are recruited from its orchestra.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Hofburg Palace", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Wien_Hofburg_Neue_Burg_Heldenplatz.jpg/400px-Wien_Hofburg_Neue_Burg_Heldenplatz.jpg", 
+            "location": {
+                "lat": 48.2065, 
+                "long": 16.3653
+            }, 
+            "desc": "Hofburg Palace is the former imperial palace in the centre of Vienna. Part of the palace forms the official residence and workplace of the President of Austria. Built in the 13th century and expanded in the centuries since, the palace has housed some of the most powerful people in European and Austrian history, including monarchs of the Habsburg dynasty, rulers of the Austro-Hungarian Empire. It was the principal imperial winter residence, as Sch\u00f6nbrunn Palace was their summer residence.\nThe Hofburg area has been the documented seat of government since 1279 for various empires and republics. The Hofburg has been expanded over the centuries to include various residences , the Imperial Chapel , the Naturhistorisches Museum and Kunsthistorisches Museum, the Austrian National Library , the Imperial Treasury , the Burgtheater, the Spanish Riding School , the Imperial Horse Stables , and the Hofburg Congress Center.\nThe Hofburg faces the Heldenplatz ordered under the reign of Emperor Francis Joseph, as part of what was to become a Kaiserforum that was never completed.\nNumerous architects have executed work at the Hofburg as it expanded, notably the Italian architect-engineer Filiberto Luchese , Lodovico Burnacini and Martino and Domenico Carlone, the Baroque architects Lukas von Hildebrandt and Joseph Emanuel Fischer von Erlach , Johann Fischer von Erlach , and the architects of the grandiose Neue Burg built between 1881 and 1913.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Stephansplatz, Vienna", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wien_-_Stephansdom_%281%29.JPG/267px-Wien_-_Stephansdom_%281%29.JPG", 
+            "location": {
+                "lat": 48.2084, 
+                "long": 16.3725
+            }, 
+            "desc": "The Stephansplatz is a square at the geographical centre of Vienna. It is named after its most prominent building, the Stephansdom, Vienna's cathedral and one of the tallest churches in the world. Before the 20th century, a row of houses separated Stephansplatz from Stock-im-Eisen-Platz, but since their destruction, the name Stephansplatz started to be used for the wider area covering both. To the west and south, respectively, run the exclusive shopping streets Graben  and K\u00e4rntner Stra\u00dfe . Opposite the Stephansdom is the Haas-Haus, a piece of striking modern architecture by Hans Hollein. Although public opinion was originally skeptical about the combination of the mediaeval cathedral and the glass and steel building, it is now considered an example of how old and new architecture can mix harmoniously .\n\n", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "St. Stephen's Cathedral, Vienna", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wien_-_Stephansdom_%281%29.JPG/267px-Wien_-_Stephansdom_%281%29.JPG", 
+            "location": {
+                "lat": 48.2085, 
+                "long": 16.373
+            }, 
+            "desc": "St. Stephen's Cathedral  is the mother church of the Roman Catholic Archdiocese of Vienna and the seat of the Archbishop of Vienna, Christoph Cardinal Sch\u00f6nborn, OP. The current Romanesque and Gothic form of the cathedral, seen today in the Stephansplatz, was largely initiated by Duke Rudolf IV  and stands on the ruins of two earlier churches, the first a parish church consecrated in 1147. The most important religious building in Vienna, St. Stephen's Cathedral has borne witness to many important events in Habsburg and Austrian history and has, with its multi-coloured tile roof, become one of the city's most recognizable symbols. The funeral of the Italian composer, Antonio Vivaldi occurred in this cathedral in 1741.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Haas House", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Vienna-haas-haus.jpg/400px-Vienna-haas-haus.jpg", 
+            "location": {
+                "lat": 48.208, 
+                "long": 16.371
+            }, 
+            "desc": "The Haas House is a building in Vienna at the Stock-im-Eisen-Platz.\nDesigned by the Austrian architect Hans Hollein, it is a building in the postmodernist style and was completed in 1990. The use of the Haas-Haus is divided between retail and a restaurant. The building is considered controversial owing to its contrast with the adjacent Stephansdom cathedral.\n\n", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Herrengasse", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WienPalaisWilczek.jpg/300px-WienPalaisWilczek.jpg", 
+            "location": {
+                "lat": 48.2097, 
+                "long": 16.3658
+            }, 
+            "desc": "The Herrengasse  is a street in Vienna, located in the first district Innere Stadt.\n\n", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Stadtpark, Vienna", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Stadtpark_station.JPG/400px-Stadtpark_station.JPG", 
+            "location": {
+                "lat": 48.2047, 
+                "long": 16.3806
+            }, 
+            "desc": "The Stadtpark  in Vienna, Austria is a large municipal park that extends from the Ringstra\u00dfe in the Innere Stadt first district up to the Heumarkt  in the Landstra\u00dfe third district. The park is divided in two sections by the Wienfluss , and has a total surface area of 65,000 square metres . Scattered throughout the park are statues of famous Viennese artists, writers, and composers, including Hans Canon, Emil Jakob Schindler, Johann Strauss II, Franz Schubert, and Anton Bruckner. The opulent Kursalon building on Johannesgasse, with its broad terrace that reaches into the park, is the site of popular waltz concerts.\n\n", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Prater", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Wiener_Riesenrad_DSC02378.JPG/400px-Wiener_Riesenrad_DSC02378.JPG", 
+            "location": {
+                "lat": 48.2161, 
+                "long": 16.3956
+            }, 
+            "desc": "The Prater is a large public park in Vienna's 2nd district . The Wurstelprater amusement park, often simply called \"Prater\", stands in one corner of the Wiener Prater and includes the Wiener Riesenrad.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Kunsthistorisches Museum", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IMG_0089_-_Wien_-_Kunsthistorisches_Museum.JPG/400px-IMG_0089_-_Wien_-_Kunsthistorisches_Museum.JPG", 
+            "location": {
+                "lat": 48.2037, 
+                "long": 16.3614
+            }, 
+            "desc": "The Kunsthistorisches Museum  is an art museum in Vienna, Austria. Housed in its festive palatial building on Ringstra\u00dfe, it is crowned with an octagonal dome. The term Kunsthistorisches Museum applies to both the institution and the main building.\nIt was opened around 1891 at the same time as the Naturhistorisches Museum, by Emperor Franz Joseph I of Austria-Hungary. The two museums have identical exteriors and face each other across Maria-Theresien-Platz. Both buildings were built between 1872 and 1891 according to plans drawn up by Gottfried Semper and Karl Freiherr von Hasenauer.\nThe two Ringstra\u00dfe museums were commissioned by the Emperor in order to find a suitable shelter for the Habsburgs' formidable art collection and to make it accessible to the general public. The fa\u00e7ade was built of sandstone. The building is rectangular in shape, and topped with a dome that is 60 meters high. The inside of the building is lavishly decorated with marble, stucco ornamentations, gold-leaf, and paintings.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Sch\u00f6nbrunn Palace", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Schloss_Sch%C3%B6nbrunn_Wien_2014_%28Zuschnitt_2%29.jpg/400px-Schloss_Sch%C3%B6nbrunn_Wien_2014_%28Zuschnitt_2%29.jpg", 
+            "location": {
+                "lat": 48.1845, 
+                "long": 16.3119
+            }, 
+            "desc": "Sch\u00f6nbrunn Palace  is a former imperial summer residence located in Vienna, Austria. The 1,441-room Baroque palace is one of the most important architectural, cultural and historical monuments in the country. Since the mid-1950s it has been a major tourist attraction. The history of the palace and its vast gardens spans over 300 years, reflecting the changing tastes, interests, and aspirations of successive Habsburg monarchs.", 
+            "types": [
+                "Baroque architecture in Austria", 
+                "Baroque gardens", 
+                "Baroque palaces", 
+                "Buildings and structures in Hietzing", 
+                "Gardens in Austria", 
+                "Historic house museums in Austria", 
+                "Houses completed in 1548", 
+                "Houses completed in 1643", 
+                "Houses completed in 1750", 
+                "Imperial residences in Austria", 
+                "Landscape design history", 
+                "Museums in Vienna", 
+                "Palaces in Vienna", 
+                "Rococo architecture of Austria", 
+                "Sch\\xf6nbrunn Palace", 
+                "World Heritage Sites in Vienna"
+            ], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 06:42:00"
+            }
+        }, 
+        {
+            "name": "St. Michael's Church, Vienna", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/St._Michael%27s_Church_Vienna_1.jpg/268px-St._Michael%27s_Church_Vienna_1.jpg", 
+            "location": {
+                "lat": 48.2081, 
+                "long": 16.3669
+            }, 
+            "desc": "St. Michael's Church  is one of the oldest churches in Vienna, Austria, and also one of its few remaining Romanesque buildings. Dedicated to the Archangel Michael, St. Michael's Church is located at Michaelerplatz across from St. Michael's Gate at the Hofburg Palace. St. Michael's used to be the parish church of the Imperial Court, when it was called Zum heiligen Michael.\nOver its long history, spanning more than eight centuries, the church has incorporated a medley of architectonic styles. The church is a late Romanesque, early Gothic building dating from about 1220\u20131240. There is a document giving 1221 as the foundation date of the church, but this is most probably a 14th-century forgery. Over time, there have been many alterations, resulting in its present day aspect, unchanged since 1792.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Gasometer, Vienna", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Gasometer-hyblerpark-2001.jpg/400px-Gasometer-hyblerpark-2001.jpg", 
+            "location": {
+                "lat": 48.185, 
+                "long": 16.42
+            }, 
+            "desc": "The Gasometers in Vienna are four former gas tanks, each of 90,000 m\u00b3 storage capacity, built as part of the Vienna municipal gas works Gaswerk Simmering in 1896\u20131899. They are located in the 11th district, Simmering. They were used from 1899 to 1984 as gas storage tanks. After the changeover from town gas to natural gas between 1969 and 1978, they were no longer used and were shut down. Only the brick exterior front walls were preserved. The structures have found new residential and commercial use in modern times.\n\n", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Museumsquartier", 
+            "img": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/38/MuseumsquartierWien2.jpg/220px-MuseumsquartierWien2.jpg", 
+            "location": {
+                "lat": 48.2033, 
+                "long": 16.3589
+            }, 
+            "desc": "The Museumsquartier  is a 60,000 m\u00b2 large area in the 7th district of the city of Vienna, Austria; it is the eighth largest cultural area in the world.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }, 
+        {
+            "name": "Spanish Riding School", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Spanish_Riding_School_Vienna.jpg/400px-Spanish_Riding_School_Vienna.jpg", 
+            "location": {
+                "lat": 48.2075, 
+                "long": 16.3661
+            }, 
+            "desc": "The Spanish Riding School  of Vienna, Austria, is a traditional riding school for Lipizzan horses, which perform in the Winter Riding School  in the Hofburg. Not only is it a centre for classical dressage, the headquarters is a tourist attraction in Vienna that offers public performances as well as permitting public viewing of some training sessions. The presentation builds on four centuries of experience and tradition in classical dressage. The leading horses and riders of the school also periodically tour and perform worldwide.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-20 23:48:00", 
+                "end": "2017-04-21 05:42:00"
+            }
+        }
+    ]
+}

@@ -39,6 +39,13 @@ def get_mock():
     return jsonify(moses)
 
 
+@route("/api/get_flights", methods=["GET"])
+def get_flights():
+    with open(os.path.join(*['.', 'DataSamples', 'Flights.json']), 'r') as flight_file:
+        moses = json.load(flight_file)
+    return jsonify(moses)
+
+
 @route("/api/get_google_places", methods=["GET"])
 def get_google_places():
     """
@@ -50,7 +57,7 @@ def get_google_places():
     obj_type = request.params.get('type', default='')
     obj_keyword = request.params.get('keyword', default='')
     url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s,%s&radius=%s&type=%s&keyword=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (
-    latitude, longitude, radius, obj_type, obj_keyword)
+        latitude, longitude, radius, obj_type, obj_keyword)
     r = requests.get(url)
     js = r.json()
     return jsonify(js)

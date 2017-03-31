@@ -1,0 +1,300 @@
+{
+    "Locations": [
+        {
+            "name": "Frankfurt (Main) Hauptbahnhof", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Hauptbahnhof_Frankfurt.jpg/400px-Hauptbahnhof_Frankfurt.jpg", 
+            "location": {
+                "lat": 50.1069, 
+                "long": 8.6625
+            }, 
+            "desc": "Frankfurt  Hauptbahnhof , often abbreviated as Frankfurt  Hbf and sometimes translated as Frankfurt central station, is the busiest railway station in Frankfurt, Germany. The name affix \"Main\" comes from the city's full name, Frankfurt am Main. In terms of railway traffic, Frankfurt  Hauptbahnhof is the busiest railway station in Germany. With about 450,000 passengers per day the station is the most frequented railway station in Germany  and one of the most frequented in Europe.\n^ a b Frankfurt.de, City of Frankfurt am Main, \"Frankfurt central station is the most important rail transport hub in Germany.\"", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Frankfurt Book Fair", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/FrankfurterBuchmesse2008.JPG/400px-FrankfurterBuchmesse2008.JPG", 
+            "location": {
+                "lat": 50.1114, 
+                "long": 8.64833
+            }, 
+            "desc": "The Frankfurt Book Fair   is the world's largest trade fair for books, based on the number of publishing companies represented, as well as the number of visitors.\nIt is held annually in mid-October at the Frankfurt Trade Fair grounds in Frankfurt am Main, Germany. The first three days are restricted exclusively to trade visitors; the general public can attend on the last two.\nRepresentatives from book publishing and multimedia companies from all over the world come to the Frankfurt Book Fair in order to negotiate international publishing rights and licensing fees. The fair is organised by a subsidiary company of the German Publishers and Booksellers Association. For five days more than 7,000 exhibitors from over 100 countries and more than 286,000 visitors take part. The Frankfurt Book Fair is considered to be the most important book fair in the world for international deals and trading.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Alte Oper", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Alteoper-ffm002.jpg/400px-Alteoper-ffm002.jpg", 
+            "location": {
+                "lat": 50.1158, 
+                "long": 8.67194
+            }, 
+            "desc": "The original opera house in Frankfurt is now the Alte Oper , a concert hall and former opera house in Frankfurt am Main, Germany. It was inaugurated in 1880 but destroyed by bombs in 1944. It was rebuilt, slowly, in the 1970s, opening again in 1981. Frankfurt Opera is now in a modern building nearby, next door to Schauspiel Frankfurt . Many important operas were performed for the first time in Frankfurt, including Carl Orff's Carmina Burana in 1937.\nThe square in front of the building is known as Opernplatz . The Alte Oper is in the centre of town Innenstadt, near the Bankenviertel.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Offenbach am Main", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Offenbacher-mainbogen-flussabw%C3%A4rts001.jpg/400px-Offenbacher-mainbogen-flussabw%C3%A4rts001.jpg", 
+            "location": {
+                "lat": 50.1, 
+                "long": 8.8
+            }, 
+            "desc": "Offenbach am Main  is a city in Hesse, Germany, located on the southside of the river Main and part of the Frankfurt Rhein-Main urban area. Offenbach has a population of 126,934.\nIn the twentieth century the city's economy was dominated by the machine-building and leather industries, and it was also a major centre of the typography and design industries. Other important industries are the automobile and pharmaceutical industries. More than half of the city's population have a non-German background, with Turks, former Yugoslavs, Arabs, Italians, Greeks and Poles as major groups.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 10:36:43"
+            }
+        }, 
+        {
+            "name": "Frankfurter Kunstverein", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Frankfurt_Am_Main-Steinernes-Haus_von_Suedosten-20110705.jpg/266px-Frankfurt_Am_Main-Steinernes-Haus_von_Suedosten-20110705.jpg", 
+            "location": {
+                "lat": 50.1107, 
+                "long": 8.6828
+            }, 
+            "desc": "The Frankfurt Art Association  is an art museum founded in 1829 by a group of influential citizen of the city of Frankfurt, Germany. The aim of the institution is to support the arts in the city, which was an important center of trade and business. Works of art were bought and exhibitions organized in order to open an access to art and culture for the public.\n\nAmong the founders were Johann Gerhard Christian Thomas, a senator and later mayor of the city, historian Johann Friedrich B\u00f6hmer, and art historian Johann David Passavant. Soon after the establishment of the museum, many important and influential citizens and artists became members.\nToday, the museum is situated in the center of Frankfurt, in a gothic building from 1464 called the Steinernes Haus , near the city's town hall. There are around 1,700 members who support the activities and enable the museum to reach its aim today, more than 150 years after its establishment. Although the museum has no permanent collection, as art is not purchased any more, its exhibitions of contemporary art are internationally renowned. Furthermore, guided tours, symposia, film programs, and excursions are organized. So even in the neighbourhood of important museums, such as the Museum of Modern Art  and Schirn Gallery , the museum manages to assert itself as an important meeting point not only for Frankfurt's art scene. Especially young artists of the state-run art school  and the well-known design school HFG are closely connected with the museum and cooperation is common.\\", 
+            "types": [
+                "1829 establishments in Germany", 
+                "Art museums and galleries in Germany", 
+                "Art museums established in 1829"
+            ], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "R\u00f6mer", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Frankfurt_Am_Main-Roemerberg_19-27_von_Suedosten-20110307.jpg/400px-Frankfurt_Am_Main-Roemerberg_19-27_von_Suedosten-20110307.jpg", 
+            "location": {
+                "lat": 50.1103, 
+                "long": 8.68167
+            }, 
+            "desc": "The R\u00f6mer  is a medieval building in the Altstadt of Frankfurt am Main, Germany, and one of the city's most important landmarks. The R\u00f6mer is located opposite the Old St. Nicholas church and has been the city hall  of Frankfurt for over 600 years. The R\u00f6mer merchant family sold it together with a second building, the Goldener Schwan , to the city council on March 11, 1405 and it was converted for use as the city hall. The Haus R\u00f6mer is actually the middle building of a set of three located in the R\u00f6merberg .\nThe R\u00f6mer is not a museum as it is occasionally used by the city for various purposes, for example as a Standesamt or civil registration office; the wedding rooms are located in the first and second floor of the Haus L\u00f6wenstein.\nThe former old town quarter between the R\u00f6mer and the Frankfurt Cathedral will be redeveloped as the Dom-R\u00f6mer Quarter until 2016, including several reconstructions of historical buildings that were destroyed during World War II.", 
+            "types": [
+                "Buildings and structures in Frankfurt", 
+                "City and town halls in Germany", 
+                "Frankfurt-Altstadt"
+            ], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Zeilgalerie", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Medienfassade_der_Zeilgalerie_bei_Tag.jpg/400px-Medienfassade_der_Zeilgalerie_bei_Tag.jpg", 
+            "location": {
+                "lat": 50.1142, 
+                "long": 8.68111
+            }, 
+            "desc": "Zeilgalerie is a shopping centre located at the Zeil in Frankfurt am Main, Germany. It was opened in September 1992 and is 41 metres tall with 10 floors, one of which is underground. There are approximately 70 stores in the building.", 
+            "types": [
+                "Shopping malls in Germany"
+            ], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Gallileo", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gallileo-ffm001.jpg/300px-Gallileo-ffm001.jpg", 
+            "location": {
+                "lat": 50.1094, 
+                "long": 8.67111
+            }, 
+            "desc": "Gallileo is a 38-storey 136 m  skyscraper in the Bahnhofsviertel district of Frankfurt, Germany. It was built from 1999 to 2003.\nThe towers architecture is made up of two towers linked by a connecting central core. The north tower is 136 m  with 38 storeys, and the south tower is 114 m . The core is the building's full height. Together with its 49,000 m2  floor space, it is the 14th tallest building in the city. Its name is an intentional misspelling of the scientist Galileo's name; the extra l comes from the building's other namesake, the nearby park Gallusanlage. Along with the nearby Silberturm, it served as the corporate headquarters of Dresdner Bank since 2008. A year later, after the takeover of Dresdner Bank by Commerzbank, the new owner planned to use only the Gallileo.\nGallileo has a glass facade with 400 individual windows forming an approximately 22,000 m2  large transparent outer skin. In the glass floors were the American artist James Turrell, integrated lighting, which make the building at night from the inside out glowing. These are not architecturally visible. The undersides of the floor slabs serve as reflective surfaces.\nShops, a bar, and the English Theatre Frankfurt are located on the ground floor.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "St\u00e4del", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Staedel-Museum-2012-Ffm-848.jpg/400px-Staedel-Museum-2012-Ffm-848.jpg", 
+            "location": {
+                "lat": 50.1028, 
+                "long": 8.67389
+            }, 
+            "desc": "The St\u00e4del, officially the St\u00e4delsches Kunstinstitut und St\u00e4dtische Galerie, is an art museum in Frankfurt am Main, with one of the most important collections in Germany.\nThe St\u00e4del owns 2,700 paintings  and a collection of 100,000 drawings and prints as well as 600 sculptures. It has around 4,000 m\u00b2 of display and a library of 100,000 books and 400 periodicals.\nMax Hollein  has been the director the St\u00e4del Museum since January 2006.\u201d \nThe St\u00e4del was honoured as \u201cMuseum of the Year 2012\u201d by the German art critics association AICA in 2012. In the same year the museum recorded the highest attendance figures in its history, of 447,395 visitors \nThis year the museum is celebrating its 200 year anniversary. For the occasion it is staging a series of special exhibitions, a major expansion of its digital educational programme, prominent additions to its collection and new publications \u2013 all under the motto \u201cThe Frankfurt citizens\u2019 museum: a gift for everyone\u201d. On Sunday 15 March 2015, the two-hundredth anniversary of its founding day, the St\u00e4del hosted a grand public celebration with a wide range of activities throughout the museum and its grounds.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Main Tower", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Maintower_Frankfurt.jpg/208px-Maintower_Frankfurt.jpg", 
+            "location": {
+                "lat": 50.1122, 
+                "long": 8.67194
+            }, 
+            "desc": "Main Tower is a 56-storey, 200 m  skyscraper in the Innenstadt district of Frankfurt, Germany. It is named after the nearby Main river. The building is 240 m  when its antenna spire is included.\nThe tower has five underground floors and two public viewing platforms. It is the only skyscraper in Frankfurt with a public viewing observatory. It is the 4th tallest building in Frankfurt and the 4th tallest in Germany, tied with Tower 185.\nThe structure was built between 1996 and 1999, and serves as headquarters for Landesbank Hessen-Th\u00fcringen . Other tenants are the German Offices of Merrill Lynch and Standard & Poor's and a television studio of the Hessischer Rundfunk. The first tenants moved in on 5 November 1999, and the official inauguration was 28 January 2000. During weather reports by the television station, the weather reporter stands on the top of the building.\nThe foyer of the building has two art pieces accessible to the public: the video installation by Bill Viola \"The World of Appearances\" and the wall mosaic by Stephan Huber \"Frankfurter Treppe / XX. Jahrhundert\" .\nThe tower's design features what appears to be two connected towers. The smaller of the two is of a cuboid shape and a design common to 1970s architecture. The second and taller of the two towers is a circular tower with an entire blue glass exterior which features the transmission tower on top.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Schaumainkai", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Mdw-haupthaus29-ffm001.jpg/400px-Mdw-haupthaus29-ffm001.jpg", 
+            "location": {
+                "lat": 50.1036, 
+                "long": 8.67389
+            }, 
+            "desc": "Schaumainkai is a street in central Frankfurt, Germany, running along the south side of the River Main. It includes a number of museums including the St\u00e4del, a leading art gallery. Because of the large concentration of museums on the riverside, the area is called Museumsufer .\nThe street is sometimes partially closed to traffic and used for Frankfurt's largest flea market.", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Hauptwache (Frankfurt am Main)", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hauptwache_Ffm_April_2010_DSC_9367.jpg/400px-Hauptwache_Ffm_April_2010_DSC_9367.jpg", 
+            "location": {
+                "lat": 50.1133, 
+                "long": 8.67889
+            }, 
+            "desc": "The Hauptwache  is a central point of Frankfurt am Main and is one of the most famous plazas  in the city. The original name Schillerplatz was superseded in the early 1900s.\n\n", 
+            "types": [], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "St. Catherine's Church, Frankfurt", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Katharinenkirche-ffm005.jpg/400px-Katharinenkirche-ffm005.jpg", 
+            "location": {
+                "lat": 50.1133, 
+                "long": 8.67972
+            }, 
+            "desc": "St. Catherine's Church  is the largest Lutheran church in Frankfurt am Main, dedicated to the martyred early Christian saint, Catherine of Alexandria. It is located in the old city centre near one of the most famous plazas in the city, the Hauptwache .", 
+            "types": [
+                "German church stubs", 
+                "Hesse building and structure stubs"
+            ], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "St. Paul's Church, Frankfurt am Main", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Frankfurt_Am_Main-Paulskirche-Ansicht_vom_Maintower.jpg/267px-Frankfurt_Am_Main-Paulskirche-Ansicht_vom_Maintower.jpg", 
+            "location": {
+                "lat": 50.1111, 
+                "long": 8.68083
+            }, 
+            "desc": "St Paul's Church  in Paulsplatz, central Frankfurt am Main, is a church with important political symbolism in Germany. It was started as a Lutheran church in 1789\u2014coincidentally the same year as the French Revolution. By 1849, it had become the seat of the Frankfurt Parliament, the first publicly and freely-elected German legislative body.\n\n", 
+            "types": [
+                "1789 establishments in the Holy Roman Empire", 
+                "Churches in Frankfurt", 
+                "Frankfurt Parliament", 
+                "Lutheran churches in Germany", 
+                "Political symbols"
+            ], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Zeil", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Frankfurt_am_Main_-_Zeil_Juli_2014.JPG/268px-Frankfurt_am_Main_-_Zeil_Juli_2014.JPG", 
+            "location": {
+                "lat": 50.1144, 
+                "long": 8.68361
+            }, 
+            "desc": "The Zeil is a street in the city centre of Frankfurt, Germany. The name, which dates back to the 14th century, is derived from the German word Zeile 'row' and originally referred to a row of houses on the eastern end of the north side; the name was not extended to the entire street until later.\nSince the end of the 19th century it has been one of the most famous and busiest shopping streets in Germany. Before World War II it was also known for its grand buildings, but most of them were destroyed and not rebuilt. The western part of the Zeil is a pedestrian zone between two large plazas, Hauptwache in the west and Konstablerwache in the east. These two plazas serve as major intersections for underground trains, trams and buses. The eastern part of the Zeil, called \"New Zeil\", connects Konstablerwache with the Friedberger Anlage.\nThe Zeil underwent a major renovation from spring 2008 until summer 2009. The pedestrian zone was extended to the west as far as the B\u00f6rsenstra\u00dfe. This brought drastic changes for motorists because the route via Hauptwache, which is an important north-south connection for individual traffic, was closed.", 
+            "types": [
+                "Germany road stubs", 
+                "Hesse geography stubs", 
+                "Pedestrian streets in Germany", 
+                "Shopping districts and streets in Germany", 
+                "Streets in Frankfurt"
+            ], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Frankfurter Judengasse", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Museum-judengasse-ffm002.jpg/400px-Museum-judengasse-ffm002.jpg", 
+            "location": {
+                "lat": 50.1136, 
+                "long": 8.68694
+            }, 
+            "desc": "The Frankfurter Judengasse  was the Jewish ghetto of Frankfurt and one of the earliest ghettos in Germany. It existed from 1462 until 1796 and was home to Germany's largest Jewish community in early modern times.\nAt the end of the 19th century, most of the buildings in the Judengasse were demolished. The area suffered major destruction during World War II and reconstruction left no visible signs of the ghetto in today's townscape of Frankfurt.\nPost-war usage of the area included a car park, a petrol station and a wholesale flower market. The decision to build an administrative complex triggered a public discussion as to what should be done with the archaeological remains uncovered during the excavation in 1977. The foundations of 19 buildings were found and five of these can be seen at the \"Museum Judengasse\" which was incorporated into the new building.", 
+            "types": [
+                "1462 establishments in the Holy Roman Empire", 
+                "1796 disestablishments in the Holy Roman Empire", 
+                "German Jewish communities", 
+                "Historic Jewish communities", 
+                "History of Frankfurt", 
+                "Jewish German history", 
+                "Jewish ghettos in Europe", 
+                "Jewish museums in Germany", 
+                "Museums in Frankfurt", 
+                "Religion in Frankfurt"
+            ], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }, 
+        {
+            "name": "Frankfurt Cathedral", 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Frankfurter_Dom_Eiserner_Steg.jpg/400px-Frankfurter_Dom_Eiserner_Steg.jpg", 
+            "location": {
+                "lat": 50.1106, 
+                "long": 8.685
+            }, 
+            "desc": "Frankfurt Cathedral  is a Roman Catholic Gothic church located in the centre of Frankfurt am Main, Germany. It is dedicated to Saint Bartholomew.", 
+            "types": [
+                "16th-century Roman Catholic church buildings", 
+                "Gothic hall churches in Germany", 
+                "Roman Catholic churches completed in 1550", 
+                "Roman Catholic churches in Germany"
+            ], 
+            "time_data": {
+                "duration": "2", 
+                "start": "2017-04-11 05:17:28", 
+                "end": "2017-04-11 09:36:43"
+            }
+        }
+    ]
+}
