@@ -3,6 +3,7 @@ from Apis.RestApiUtils import RestApiUtils
 from Apis.Amadeus import Config
 from Apis.GoogleMapsDirectionsLookup import get_directions_travel_duration
 import datetime
+import Apis.APIConsts
 import json
 from threading import Thread
 
@@ -33,7 +34,7 @@ class AmadeusClient(object):
         # Add address if works
         # activities_parsed = cls.enrich_and_filter_activities(activities_parsed)
         activities_parsed = cls.enrich_and_filter_activities(curr_location, times, activities_parsed)
-        parsed_amadeos_response = {Config.RETURN_LOCATION: activities_parsed}
+        parsed_amadeos_response = {Apis.APIConsts.RETURN_LOCATION: activities_parsed}
         return parsed_amadeos_response
 
     @classmethod

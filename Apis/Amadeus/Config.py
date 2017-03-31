@@ -29,7 +29,6 @@ POINT_OF_INTEREST_RETURN_FORMAT = {
     "img": "main_image",
     "types": "categories"
 }
-RETURN_LOCATION = "Locations"
 REQUEST_MAIN = "points_of_interest"
 
 # ENRICH
