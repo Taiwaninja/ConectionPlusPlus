@@ -202,11 +202,11 @@ def get_activities():
         if deal_id == "SC_139604220_16_110417_LH":
             # If first flight
             if 50 <= latitude and latitude <= 51:
-                with open(os.path.join(*['.', 'DataSamples', 'Activity1.json']), 'r') as activity_file:
+                with open(os.path.join(*['.', 'DataSamples', 'Activity1H.json']), 'r') as activity_file:
                     activity = json.load(activity_file)
                     return jsonify(activity)
             else:
-                with open(os.path.join(*['.', 'DataSamples', 'Activity2.json']), 'r') as activity_file:
+                with open(os.path.join(*['.', 'DataSamples', 'Activity2H.json']), 'r') as activity_file:
                     activity = json.load(activity_file)
                     return jsonify(activity)
 
