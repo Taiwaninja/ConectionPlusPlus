@@ -39,6 +39,23 @@ def get_mock():
     return jsonify(moses)
 
 
+@route("/api/get_google_places", methods=["GET"])
+def get_google_places():
+    """
+    view-source:http://127.0.0.1:8080/api/get_google_places?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee&keyword=starbucks
+    """
+    longitude = request.params.get('longitude', default=-73.98513)
+    latitude = request.params.get('latitude', default=40.75889)
+    radius = request.params.get('radius', default=5000)
+    obj_type = request.params.get('type', default='')
+    obj_keyword = request.params.get('keyword', default='')
+    url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s,%s&radius=%s&type=%s&keyword=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (
+    latitude, longitude, radius, obj_type, obj_keyword)
+    r = requests.get(url)
+    js = r.json()
+    return jsonify(js)
+
+
 @route("/api/get_restaurants", methods=["GET"])
 def get_restaurants():
     """
