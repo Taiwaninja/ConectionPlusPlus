@@ -50,6 +50,31 @@ def get_flights():
     return jsonify(flight)
 
 
+@route("/api/get_flights_back", methods=["GET"])
+def get_flights_back():
+    """
+    http://127.0.0.1:8080/api/get_flights_back?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee
+    :return: 
+    """
+    with open(os.path.join(*['.', 'DataSamples', 'flightsBack.json']), 'rb') as flight_file:
+        flight = json.load(flight_file)
+    return jsonify(flight)
+
+
+@route("/api/get_flights_back_forth", methods=["GET"])
+def get_flights_back_forth():
+    """
+    http://127.0.0.1:8080/api/get_flights_back_forth?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee
+    :return: 
+    """
+    with open(os.path.join(*['.', 'DataSamples', 'flightsBack.json']), 'rb') as flight_file:
+        flight = json.load(flight_file)
+    with open(os.path.join(*['.', 'DataSamples', 'flightsBack.json']), 'rb') as flight_file:
+        flightBack = json.load(flight_file)
+    flights = {"OUTBOUND": flight, "INBOUND": flightBack}
+    return jsonify(flights)
+
+
 @route("/api/get_google_places", methods=["GET"])
 def get_google_places():
     """

@@ -6,47 +6,44 @@
         "Flight_no": "LH691",
         "Airport_code": "TLV",
         "city": "TLV",
-        "time": "11/04/17 04:50-08:20",
-
-
-
+        "time": "11/04/17 04:50",
         "Location": {
-          "lng": 31.000,
-          "lat": 32.0000
+          "lat": 32.005532,
+          "lng": 34.8854112
         }
       },
       "departure2": {
         "Flight_no": "LH4286",
-        "Airport_code": "PGS",
+        "Airport_code": "FRA",
         "city": "FRA",
-        "time": "11/04/17 21:00-10:00",
+        "time": "11/04/17 21:00",
         "Location": {
-          "lng": 31.000,
-          "lat": 32.0000
+          "lat": 50.0379326,
+          "lng": 8.5643405
         }
       },
       "arrival1": {
         "Flight_no": "LH691",
-        "Airport_code": "PGS",
+        "Airport_code": "FRA",
         "city": "FRA",
-        "time": "19:00",
+        "time": "11/04/17 08:20",
         "Location": {
-          "lng": 31.000,
-          "lat": 32.0000
+          "lat": 50.0379326,
+          "lng": 8.5643405
         }
       },
       "arrival2": {
         "Flight_no": "LH4286",
         "Airport_code": "BKK",
         "city": "BKK",
-        "time": "20:00",
+        "time": "12/04/17 10:00",
         "Location": {
-          "lng": 31.000,
-          "lat": 32.0000
+          "lat": 13.6899991,
+          "lng": 100.7523011
         }
       },
       "Layover": 1,
-      "price": 999,
+      "price": 859,
       "currency": "USD"
     },
     {
@@ -55,10 +52,10 @@
         "Flight_no": "LY81",
         "Airport_code": "TLV",
         "city": "TLV",
-        "time": "11/04/17 22:30-14:00",
+        "time": "11/04/17 22:30",
         "Location": {
-          "lng": 31.000,
-          "lat": 32.0000
+          "lat": 32.005532,
+          "lng": 34.8854112
         }
       },
       "departure2": {},
@@ -66,15 +63,15 @@
         "Flight_no": "LY81",
         "Airport_code": "BKK",
         "city": "BKK",
-        "time": "19:00",
+        "time": "12/04/17 14:00",
         "Location": {
-          "lng": 31.000,
-          "lat": 32.0000
+          "lat": 13.6899991,
+          "lng": 100.7523011
         }
       },
       "arrival2": {},
       "Layover": 0,
-      "price": 1300,
+      "price": 1501,
       "currency": "USD"
     }
   ]
