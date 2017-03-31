@@ -5,11 +5,11 @@ from datetime import datetime
 # coordinates might be upside down
 
 CONNECTION1 = {"lat": 50.038952, "long": 8.561991, "radius": 100,
-               "start_time": datetime(year=2017, month=4, day=11, hour=4, minute=50),
+               "start_time": datetime(year=2017, month=4, day=11, hour=8, minute=20),
                "end_time": datetime(year=2017, month=4, day=11, hour=21, minute=0)}
 
 CONNECTION2 = {"lat": 48.116428, "long": 16.565652, "radius": 100,
-               "start_time": datetime(year=2017, month=4, day=20, hour=23, minute=45),
+               "start_time": datetime(year=2017, month=4, day=21, hour=05, minute=35),
                "end_time": datetime(year=2017, month=4, day=21, hour=20, minute=25)}
 
 
