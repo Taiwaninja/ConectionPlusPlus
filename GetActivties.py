@@ -4,6 +4,7 @@ from bottle import route, run, debug, response, template, request, static_file, 
 from Apis.Amadeus.AmadeusClient import AmadeusClient
 import json
 import os
+import requests
 
 
 def jsonify(dic):
@@ -36,6 +37,19 @@ def get_mock():
     return jsonify(moses)
 
 
+@route("/api/get_restaurants", methods=["GET"])
+def get_restaurants():
+    """
+    http://127.0.0.1:8080/api/get_restaurants?longitude=-73.98513&latitude=40.75889&radius=50
+    """
+    longitude = request.params.get('longitude', default=-73.98513)
+    latitude = request.params.get('latitude', default=40.75889)
+    radius = request.params.get('radius', default=1000)
+    url = 'https://developers.zomato.com/api/v2.1/search?lat=%s&lon=%s&radius=%s' % (latitude, longitude, radius)
+    r = requests.get(url, headers={"user-key":'eb437426154058ef4547a6f81778539e', 'Accept': 'application/json'})
+    js = r.json()
+    return jsonify(js)
+    
 @route("/api/get_amadeus", methods=["GET"])
 def get_amadeus():
     """
