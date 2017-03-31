@@ -35,8 +35,20 @@ def get_mock():
     with open(os.path.join(*['.', 'DataSamples', 'MosesSample.json']), 'r') as mosesFile:
         moses = json.load(mosesFile)
     return jsonify(moses)
-
-
+    
+    
+@route("/api/get_google_places_details", methods=["GET"])
+def get_google_places_details():
+    """
+    http://127.0.0.1:8080/api/get_google_places_details?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4
+    """
+    placeid = request.params.get('placeid', default='')
+    url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (placeid,)
+    r = requests.get(url)
+    js = r.json()
+    return jsonify(js)
+    
+    
 @route("/api/get_google_places", methods=["GET"])
 def get_google_places():
     """
