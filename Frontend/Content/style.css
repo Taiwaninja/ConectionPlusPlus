@@ -39,3 +39,11 @@ span.adress {
     font-size: 14px;
     color: rgb(176, 173, 173);
 }
+
+svg{
+    color:teal;
+}
+
+.md-datepicker-input{
+    background-color: rgba(255,255,255,0.85); border-radius: 8px; padding-left: 10px; font-size: 20px; height: 48px;
+}

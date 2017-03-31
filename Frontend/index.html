@@ -10,25 +10,56 @@
     <div ng-controller="mainCtrl" ng-cloak>
         <md-content class="md-padding navbar">
             <md-nav-bar md-selected-nav-item="currentNavItem"
-                        nav-bar-aria-label="navigation links">
-                <md-nav-item md-nav-click="goto('/home')" name="home">
-                    <ng-md-icon icon="home" style="fill: teal" size="30"></ng-md-icon> 
+                        nav-bar-aria-label="navigation links" hide-sm>
+                <md-nav-item md-nav-click="goto('/home', Home)" name="home" hide-sm hide-xs>
+                    <ng-md-icon icon="home" style="fill: teal" size="30"></ng-md-icon>
                 </md-nav-item>
-                <md-nav-item md-nav-click="goto('/flights')" name="flights">
+                <md-nav-item md-nav-click="goto('/flights', 'Flights')" name="flights" hide-sm hide-xs>
                     Flights
                 </md-nav-item>
-                <md-nav-item md-nav-click="goto('/Attractions')" name="attractions">
+                <md-nav-item md-nav-click="goto('/Attractions', 'Attractions')" name="attractions" hide-sm hide-xs>
                     Attractions
                 </md-nav-item>
-                <md-nav-item md-nav-click="goto('/AroundMe')" name="aroundMe">
+                <md-nav-item md-nav-click="goto('/AroundMe', 'Around Me')" name="aroundMe" hide-sm hide-xs>
                     Around Me
                 </md-nav-item>
+                <md-nav-item md-nav-click="toggleMenu('left')" name="hamburgerMenu" hide-gt-sm>
+                    <ng-md-icon icon="dehaze" style="fill: teal" size="30"></ng-md-icon>
+                </md-nav-item>
             </md-nav-bar>
+
         </md-content>
 
         <div ng-view></div>
-    </div>
 
+        <md-sidenav class="md-sidenav-left" md-component-id="left"
+                    md-whiteframe-z2 md-is-locked-open="false" layout="column" style="padding:7px">
+            <md-list>
+                <md-list-item ng-click="goto('/home', 'Home')">
+                    <md-item-content md-ink-ripple layout="row" layout-align="start center">Home</md-item-content>
+                </md-list-item>
+            </md-list>
+            <md-divider></md-divider>
+            <md-list>
+                <md-list-item ng-click="goto('/flights', 'Flights')">
+                    <md-item-content md-ink-ripple layout="row" layout-align="start center">Flights</md-item-content>
+                </md-list-item>
+            </md-list>
+            <md-divider></md-divider>
+            <md-list>
+                <md-list-item ng-click="goto('/Attractions', 'Attractions')">
+                    <md-item-content md-ink-ripple layout="row" layout-align="start center">Attractions</md-item-content>
+                </md-list-item>
+            </md-list>
+            <md-divider></md-divider>
+            <md-list>
+                <md-list-item ng-click="goto('/AroundMe', 'Around Me')">
+                    <md-item-content md-ink-ripple layout="row" layout-align="start center">Around Me</md-item-content>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+
+    </div>
     <script src="Plugins/jquery-3.2.0.min.js"></script>
     <!-- Angular -->
     <script src="Plugins/Angular/angular.min.js"></script>

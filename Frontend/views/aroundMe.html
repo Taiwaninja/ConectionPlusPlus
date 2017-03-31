@@ -1,14 +1,19 @@
 <div layout="column" flex ng-init="init()">
     <div style="height:80px"></div>
 <md-content class="md-padding" layout-xs="column" layout="row">
-    <div flex layout="row">
-        <md-card ng-repeat="loc in locations.Locations" flex="20">
-            <img class="location_img md-card-image" ng-src="{{loc.img}}" />
+    <div layout="row" layout-wrap flex="nogrow" style="display:flex;justify-content:center">
+        <md-card ng-repeat="loc in locations.Locations" flex-gt-sm="30" flex-xs="90" >
+            <div style="background-image: url({{loc.img}});background-size: cover;background-repeat: no-repeat;height: 220px;overflow: hidden;background-position: center center;display: flex"></div>
+            <div layout="row" layout-align="space-around center" style="padding-top: 7px;padding-bottom:7px;background-color:rgb(242, 242, 242);">
+                <ng-md-icon icon="star" style="fill: gold" size="30"></ng-md-icon> {{loc.rating}}
+                <ng-md-icon icon="drive_eta" style="fill: grey" size="30"></ng-md-icon> {{loc.distance}} {{loc.duration}}
+                <ng-md-icon icon="schedule" style="fill: grey" size="30"></ng-md-icon> {{loc.total_duration}}
+            </div>
             <div layout="column">
                 <md-card-title>
                     <md-card-title-text>
                         <span class="md-headline">{{loc.name}}</span>
-                        <span class="adress">{{loc.address}}</span>
+                        <span class="adress"><ng-md-icon icon="place" style="fill: grey" size="16"></ng-md-icon>{{loc.address}}</span>
                     </md-card-title-text>
                 </md-card-title>
                 <md-card-content>
@@ -16,18 +21,7 @@
                         {{loc.desc}}
                     </p>
                 </md-card-content>
-            </div>
-            <!--<md-card-actions layout="row" layout-align="end center">
-                <md-button class="md-icon-button" aria-label="Favorite">
-                    <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
-                </md-button>
-                <md-button class="md-icon-button" aria-label="Settings">
-                    <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                </md-button>
-                <md-button class="md-icon-button" aria-label="Share">
-                    <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
-                </md-button>
-            </md-card-actions>-->
+            </div>      
         </md-card>
     </div>
 </md-content>

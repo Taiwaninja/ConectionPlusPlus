@@ -5,7 +5,7 @@ app.controller('AroundMeCtrl', function ($scope, $http) {
     $scope.locations = null;
 
     $scope.init = function () {
-        $.get("http://127.0.0.1:8080/api/get_mock")
+        $.get("http://10.10.192.137:8080/api/get_amadeus?longitude=32.0724416&latitude=34.7796856&radius=30")
             .done(function (data) {
                 $scope.locations = JSON.parse(data);
             });
