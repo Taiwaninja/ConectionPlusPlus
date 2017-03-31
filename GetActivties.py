@@ -2,6 +2,8 @@
 
 from bottle import route, run, debug, response, template, request, static_file, error, hook
 from Apis.Amadeus.AmadeusClient import AmadeusClient
+from Apis.Zomato.ZomatoClient import ZomatoClient
+from Apis.ActivityRetriever import ActivityRetriever
 import json
 import os
 import requests
@@ -37,6 +39,59 @@ def get_mock():
     return jsonify(moses)
     
     
+@route("/api/get_flights", methods=["GET"])
+def get_flights():
+    """
+    http://127.0.0.1:8080/api/get_flights?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee
+    :return: 
+    """
+    with open(os.path.join(*['.', 'DataSamples', 'flights.json']), 'rb') as flight_file:
+        flight = json.load(flight_file)
+    return jsonify(flight)
+
+
+@route("/api/get_flights_back", methods=["GET"])
+def get_flights_back():
+    """
+    http://127.0.0.1:8080/api/get_flights_back?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee
+    :return: 
+    """
+    with open(os.path.join(*['.', 'DataSamples', 'flightsBack.json']), 'rb') as flight_file:
+        flight = json.load(flight_file)
+    return jsonify(flight)
+
+
+@route("/api/get_flights_back_forth", methods=["GET"])
+def get_flights_back_forth():
+    """
+    http://127.0.0.1:8080/api/get_flights_back_forth?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee
+    :return: 
+    """
+    with open(os.path.join(*['.', 'DataSamples', 'flightsBack.json']), 'rb') as flight_file:
+        flight = json.load(flight_file)
+    with open(os.path.join(*['.', 'DataSamples', 'flightsBack.json']), 'rb') as flight_file:
+        flightBack = json.load(flight_file)
+    flights = {"OUTBOUND": flight, "INBOUND": flightBack}
+    return jsonify(flights)
+
+
+@route("/api/get_google_places", methods=["GET"])
+def get_google_places():
+    """
+    view-source:http://127.0.0.1:8080/api/get_google_places?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee&keyword=starbucks
+    """
+    longitude = request.params.get('longitude', default=-73.98513)
+    latitude = request.params.get('latitude', default=40.75889)
+    radius = request.params.get('radius', default=5000)
+    obj_type = request.params.get('type', default='')
+    obj_keyword = request.params.get('keyword', default='')
+    url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s,%s&radius=%s&type=%s&keyword=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (
+        latitude, longitude, radius, obj_type, obj_keyword)
+    r = requests.get(url)
+    js = r.json()
+    return jsonify(js)
+
+    
 @route("/api/get_google_places_details", methods=["GET"])
 def get_google_places_details():
     """
@@ -48,23 +103,7 @@ def get_google_places_details():
     js = r.json()
     return jsonify(js)
     
-    
-@route("/api/get_google_places", methods=["GET"])
-def get_google_places():
-    """
-    view-source:http://127.0.0.1:8080/api/get_google_places?longitude=-73.98513&latitude=40.75889&radius=300&type=caffee&keyword=starbucks
-    """
-    longitude = request.params.get('longitude', default=-73.98513)
-    latitude = request.params.get('latitude', default=40.75889)
-    radius = request.params.get('radius', default=5000)
-    obj_type = request.params.get('type', default='')
-    obj_keyword = request.params.get('keyword', default='')
-    url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%s,%s&radius=%s&type=%s&keyword=%s&key=AIzaSyDgQu2CSBVjgoICVHQTdDptAI9fh9yDX0g' % (latitude, longitude, radius, obj_type, obj_keyword)
-    r = requests.get(url)
-    js = r.json()
-    return jsonify(js)
-    
-    
+
 @route("/api/get_restaurants", methods=["GET"])
 def get_restaurants():
     """
@@ -73,12 +112,13 @@ def get_restaurants():
     longitude = request.params.get('longitude', default=-73.98513)
     latitude = request.params.get('latitude', default=40.75889)
     radius = request.params.get('radius', default=1000)
-    url = 'https://developers.zomato.com/api/v2.1/search?lat=%s&lon=%s&radius=%s' % (latitude, longitude, radius)
-    r = requests.get(url, headers={"user-key":'eb437426154058ef4547a6f81778539e', 'Accept': 'application/json'})
-    js = r.json()
+    # url = 'https://developers.zomato.com/api/v2.1/search?lat=%s&lon=%s&radius=%s' % (latitude, longitude, radius)
+    # r = requests.get(url, headers={"user-key":'eb437426154058ef4547a6f81778539e'})
+    # js = r.json()
+    js = ZomatoClient.get_point_of_interest(latitude, longitude, radius=radius)
     return jsonify(js)
-    
-    
+
+
 @route("/api/get_amadeus", methods=["GET"])
 def get_amadeus():
     """
@@ -97,6 +137,31 @@ def get_mock_amadeus():
     around_moses = AmadeusClient.get_point_of_interest(32.107898, 34.838002, 1)
     # TODO: If you make changes load and jasonify again
     return jsonify(around_moses)
+
+
+@route("/api/get_activities", methods=["GET"])
+def get_activities():
+    """
+    http://127.0.0.1:8080/api/get_activities?longitude=32.007966&latitude=34.53866&radius=30&deal_id=blat
+    """
+    longitude = request.params.get('longitude', default=32.107898)
+    latitude = request.params.get('latitude', default=34.838002)
+    radius = request.params.get('radius', default=1)
+    deal_id = request.params.get("deal_id", default=None)
+    if deal_id is not None:
+        if deal_id == "SC_139604220_16_110417_LH":
+            # If first flight
+            if 50 <= latitude and latitude >= 50:
+                with open(os.path.join(*['.', 'DataSamples', 'Activity1.json']), 'r') as activity_file:
+                    activity = json.load(activity_file)
+                    return jsonify(activity)
+            else:
+                with open(os.path.join(*['.', 'DataSamples', 'Activity2.json']), 'r') as activity_file:
+                    activity = json.load(activity_file)
+                    return jsonify(activity)
+
+    activities = ActivityRetriever.get_point_of_interest(longitude, latitude, radius=radius)
+    return jsonify(activities)
 
 
 def main():
